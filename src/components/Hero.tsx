@@ -12,7 +12,7 @@ const Hero: React.FC = () => {
         <div className="hero-content">
           <div className="hero-text">
             <h1 className="hero-title">
-              Powering Your <span className="highlight">Industrial</span> Future
+              SMART ACCURATE AND MODERN <span className="highlight">ELECTROMECHANICAL</span>  ENGINEERING
             </h1>
             <p className="hero-description">
               Leading electromechanical contracting solutions for industrial, commercial, 
@@ -29,15 +29,15 @@ const Hero: React.FC = () => {
             </div>
             <div className="hero-stats">
               <div className="stat">
-                <span className="stat-number">18+</span>
+                <span className="stat-number">10+</span>
                 <span className="stat-label">Years Experience</span>
               </div>
               <div className="stat">
-                <span className="stat-number">500+</span>
+                <span className="stat-number">100+</span>
                 <span className="stat-label">Projects Completed</span>
               </div>
               <div className="stat">
-                <span className="stat-number">50+</span>
+                <span className="stat-number">10+</span>
                 <span className="stat-label">Expert Engineers</span>
               </div>
             </div>

@@ -1,6 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Footer.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEnvelope, faHouseMedicalCircleExclamation, faLocationPin, faMailBulk, faPhone, faX } from '@fortawesome/free-solid-svg-icons';
+import { faFacebook, faLinkedin, faXTwitter } from '@fortawesome/free-brands-svg-icons';
 
 const Footer: React.FC = () => {
   return (
@@ -9,17 +12,17 @@ const Footer: React.FC = () => {
         <div className="footer-content">
           <div className="footer-section">
             <div className="footer-logo">
-              <span className="logo-icon">⚡</span>
-              PowerTech
+              <span className="logo-icon"></span>
+              S.A.M Engineering
             </div>
             <p className="footer-description">
               Leading electromechanical contracting company providing innovative solutions 
-              for industrial and commercial projects since 2005.
+              for industrial and commercial projects.
             </p>
             <div className="social-links">
-              <a href="#" className="social-link">LinkedIn</a>
-              <a href="#" className="social-link">Twitter</a>
-              <a href="#" className="social-link">Facebook</a>
+              <a href="#" className="social-link"><FontAwesomeIcon icon={faLinkedin} size='2x'/></a>
+              <a href="#" className="social-link"><FontAwesomeIcon icon={faXTwitter} size='2x'/></a>
+              <a href="#" className="social-link"><FontAwesomeIcon icon={faFacebook} size='2x'/></a>
             </div>
           </div>
 
@@ -48,16 +51,16 @@ const Footer: React.FC = () => {
             <h4>Contact Info</h4>
             <div className="contact-info">
               <div className="contact-item">
-                <span className="contact-icon">📍</span>
-                123 Industrial Way, Tech City, TC 12345
+                <span className="contact-icon"><FontAwesomeIcon icon={faLocationPin}/></span>
+                naperi, p/bag 303, Blantyre
               </div>
               <div className="contact-item">
-                <span className="contact-icon">📞</span>
-                +1 (555) 123-4567
+                <span className="contact-icon"><FontAwesomeIcon icon={faPhone}/></span>
+                +265 991 548 657
               </div>
               <div className="contact-item">
-                <span className="contact-icon">✉️</span>
-                info@powertech.com
+                <span className="contact-icon"><FontAwesomeIcon icon={faEnvelope}/></span>
+                info@samengineering.com
               </div>
             </div>
           </div>
@@ -80,7 +83,7 @@ const Footer: React.FC = () => {
         </div>
         
         <div className="footer-bottom">
-          <p>&copy; 2024 PowerTech Electromechanical. All rights reserved.</p>
+          <p>&copy; 2025 S.A.M Engineering. All rights reserved.</p>
         </div>
       </div>
     </footer>

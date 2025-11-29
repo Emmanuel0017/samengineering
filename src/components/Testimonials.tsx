@@ -16,26 +16,26 @@ const Testimonials: React.FC = () => {
   const testimonials: Testimonial[] = [
     {
       id: 1,
-      name: 'Sarah Johnson',
-      company: 'TechManufacture Inc.',
-      role: 'Operations Director',
-      content: 'PowerTech delivered exceptional electrical system upgrades for our manufacturing facility. Their expertise and professionalism exceeded our expectations.',
+      name: 'John Semu',
+      company: 'Ethco',
+      role: 'Project Manager',
+      content: 'S.A.M Engineering delivered exceptional electrical system services for our facility. Their expertise and professionalism exceeded our expectations.',
       rating: 5
     },
     {
       id: 2,
-      name: 'Michael Chen',
-      company: 'Global Logistics Corp',
-      role: 'Facility Manager',
+      name: 'Wongani Mtekera',
+      company: 'Nacala Logistics',
+      role: 'Chief Engineer',
       content: 'The HVAC installation was completed on time and within budget. The team was knowledgeable and responsive throughout the entire project.',
       rating: 5
     },
     {
       id: 3,
-      name: 'Emily Rodriguez',
-      company: 'Innovation Park',
-      role: 'Project Manager',
-      content: 'Outstanding mechanical installation services. PowerTech attention to detail and commitment to quality is impressive.',
+      name: 'Chifundo',
+      company: 'CEAR',
+      role: 'Engineer',
+      content: 'Outstanding performance in tower inspection and maintainance. PowerTech attention to detail and commitment to quality is impressive.',
       rating: 5
     }
   ];

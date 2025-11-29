@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './ContactCTA.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 
 const ContactCTA: React.FC = () => {
   return (
@@ -11,21 +13,21 @@ const ContactCTA: React.FC = () => {
             <h2>Ready to Power Your Next Project?</h2>
             <p>
               Let's discuss how our electromechanical expertise can bring your vision to life. 
-              Contact us today for a free consultation and project assessment.
+              Contact us today for a consultation and project assessment.
             </p>
           </div>
           <div className="cta-actions">
             <Link to="/contact" className="btn btn-primary cta-btn">
-              Get Free Consultation
+              Get Consultation
             </Link>
             <div className="cta-info">
               <div className="info-item">
-                <span className="info-icon">📞</span>
-                <span>+1 (555) 123-4567</span>
+                <span className="info-icon"><FontAwesomeIcon icon={faPhone}/></span>
+                <span>+265 991 548 657</span>
               </div>
               <div className="info-item">
-                <span className="info-icon">✉️</span>
-                <span>info@powertech.com</span>
+                <span className="info-icon"><FontAwesomeIcon icon={faEnvelope}/></span>
+                <span>info@samengineering.com</span>
               </div>
             </div>
           </div>

@@ -78,7 +78,7 @@ p {
 
 .btn-secondary {
   background-color: transparent;
-  color: var(--dark-blue);
+  color: var(--white);
   border: 2px solid var(--dark-blue);
 }
 

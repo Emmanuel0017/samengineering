@@ -35,7 +35,7 @@ const Testimonials: React.FC = () => {
       name: 'Chifundo',
       company: 'CEAR',
       role: 'Engineer',
-      content: 'Outstanding performance in tower inspection and maintainance. PowerTech attention to detail and commitment to quality is impressive.',
+      content: 'Outstanding performance in tower inspection and maintainance. S.A.M Engineering attention to detail and commitment to quality is impressive.',
       rating: 5
     }
   ];

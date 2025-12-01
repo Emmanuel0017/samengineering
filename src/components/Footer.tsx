@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Footer.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, faHouseMedicalCircleExclamation, faLocationPin, faMailBulk, faPhone, faX } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faLocationPin, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { faFacebook, faLinkedin, faXTwitter } from '@fortawesome/free-brands-svg-icons';
 
 const Footer: React.FC = () => {
@@ -20,9 +20,9 @@ const Footer: React.FC = () => {
               for industrial and commercial projects.
             </p>
             <div className="social-links">
-              <a href="#" className="social-link"><FontAwesomeIcon icon={faLinkedin} size='2x'/></a>
-              <a href="#" className="social-link"><FontAwesomeIcon icon={faXTwitter} size='2x'/></a>
-              <a href="#" className="social-link"><FontAwesomeIcon icon={faFacebook} size='2x'/></a>
+              <a href="/" className="social-link"><FontAwesomeIcon icon={faLinkedin} size='2x'/></a>
+              <a href="/" className="social-link"><FontAwesomeIcon icon={faXTwitter} size='2x'/></a>
+              <a href="/" className="social-link"><FontAwesomeIcon icon={faFacebook} size='2x'/></a>
             </div>
           </div>
 
@@ -40,10 +40,10 @@ const Footer: React.FC = () => {
           <div className="footer-section">
             <h4>Services</h4>
             <div className="footer-links">
-              <a href="#" className="footer-link">Electrical Systems</a>
-              <a href="#" className="footer-link">Mechanical Installation</a>
-              <a href="#" className="footer-link">HVAC Solutions</a>
-              <a href="#" className="footer-link">Maintenance</a>
+              <a href="/" className="footer-link">Electrical Systems</a>
+              <a href="/" className="footer-link">Mechanical Installation</a>
+              <a href="/" className="footer-link">HVAC Solutions</a>
+              <a href="/" className="footer-link">Maintenance</a>
             </div>
           </div>
 

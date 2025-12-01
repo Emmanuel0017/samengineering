@@ -8,11 +8,6 @@ import {
   faHandshake,
   faUserTie,
   faUserTie as faUserTieFemale,
-  faTrophy,
-  faBolt,
-  faToolbox,
-  faLeaf,
-  faIndustry,
   faBullseye,
   faEye
 } from '@fortawesome/free-solid-svg-icons';

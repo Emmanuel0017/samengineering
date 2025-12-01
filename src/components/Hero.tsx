@@ -12,7 +12,7 @@ const Hero: React.FC = () => {
         <div className="hero-content">
           <div className="hero-text">
             <h1 className="hero-title">
-              SMART ACCURATE AND MODERN <span className="highlight">ELECTROMECHANICAL</span>  ENGINEERING
+              SMART ACCURATE AND MODERN <span className="highlight">ELECTROMECHANICAL</span> ENGINEERING
             </h1>
             <p className="hero-description">
               Leading electromechanical contracting solutions for industrial, commercial, 

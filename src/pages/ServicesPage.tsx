@@ -1,10 +1,21 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './ServicesPage.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faBolt,
+  faTools,
+  faSnowflake,
+  faWrench,
+  faPlug,
+  faIndustry,
+  faCheck,
+  faArrowRight
+} from '@fortawesome/free-solid-svg-icons';
 
 interface ServiceDetail {
   id: number;
-  icon: string;
+  icon: any; // IconDefinition type
   title: string;
   description: string;
   features: string[];
@@ -15,7 +26,7 @@ const ServicesPage: React.FC = () => {
   const services: ServiceDetail[] = [
     {
       id: 1,
-      icon: '⚡',
+      icon: faBolt,
       title: 'Electrical Systems',
       description: 'Comprehensive electrical solutions for industrial, commercial, and residential applications.',
       features: [
@@ -35,7 +46,7 @@ const ServicesPage: React.FC = () => {
     },
     {
       id: 2,
-      icon: '🔧',
+      icon: faTools,
       title: 'Mechanical Installation',
       description: 'Professional mechanical systems installation and commissioning services.',
       features: [
@@ -55,7 +66,7 @@ const ServicesPage: React.FC = () => {
     },
     {
       id: 3,
-      icon: '❄️',
+      icon: faSnowflake,
       title: 'HVAC Solutions',
       description: 'Heating, ventilation, and air conditioning systems for optimal environmental control.',
       features: [
@@ -75,7 +86,7 @@ const ServicesPage: React.FC = () => {
     },
     {
       id: 4,
-      icon: '🛠️',
+      icon: faWrench,
       title: 'Maintenance Services',
       description: 'Preventive and corrective maintenance programs to ensure system reliability.',
       features: [
@@ -95,7 +106,7 @@ const ServicesPage: React.FC = () => {
     },
     {
       id: 5,
-      icon: '🔌',
+      icon: faPlug,
       title: 'Power Distribution',
       description: 'Efficient power distribution systems design and implementation.',
       features: [
@@ -115,7 +126,7 @@ const ServicesPage: React.FC = () => {
     },
     {
       id: 6,
-      icon: '🏭',
+      icon: faIndustry,
       title: 'Industrial Automation',
       description: 'Advanced automation solutions for improved efficiency and productivity.',
       features: [
@@ -138,9 +149,13 @@ const ServicesPage: React.FC = () => {
   return (
     <div className="services-page">
       <section className="page-hero">
+        <div className="hero-background"></div>
+        <div className="hero-overlay"></div>
         <div className="container">
-          <h1>Our Services</h1>
-          <p>Comprehensive electromechanical solutions tailored to your needs</p>
+          <div className="hero-content">
+            <h1>Our Services</h1>
+            <p>Comprehensive electromechanical solutions tailored to your needs</p>
+          </div>
         </div>
       </section>
 
@@ -149,7 +164,7 @@ const ServicesPage: React.FC = () => {
           <div className="services-intro">
             <h2>Expert Electromechanical Solutions</h2>
             <p>
-              With over 18 years of experience, PowerTech delivers comprehensive 
+              With over 18 years of experience, S.A.M Engineering delivers comprehensive 
               electromechanical services that combine technical expertise with 
               innovative solutions. Our team of certified professionals ensures 
               every project meets the highest standards of quality and safety.
@@ -161,7 +176,7 @@ const ServicesPage: React.FC = () => {
               <div key={service.id} className="service-detail">
                 <div className="service-header">
                   <div className="service-icon-large">
-                    {service.icon}
+                    <FontAwesomeIcon icon={service.icon} />
                   </div>
                   <div className="service-info">
                     <h3>{service.title}</h3>
@@ -174,7 +189,9 @@ const ServicesPage: React.FC = () => {
                     <h4>Key Features</h4>
                     <ul>
                       {service.features.map((feature, index) => (
-                        <li key={index}>{feature}</li>
+                        <li key={index}>
+                          <FontAwesomeIcon icon={faCheck} className="feature-check" /> {feature}
+                        </li>
                       ))}
                     </ul>
                   </div>
@@ -183,7 +200,9 @@ const ServicesPage: React.FC = () => {
                     <h4>Applications</h4>
                     <ul>
                       {service.applications.map((application, index) => (
-                        <li key={index}>{application}</li>
+                        <li key={index}>
+                          <FontAwesomeIcon icon={faCheck} className="application-check" /> {application}
+                        </li>
                       ))}
                     </ul>
                   </div>
@@ -191,7 +210,7 @@ const ServicesPage: React.FC = () => {
                 
                 <div className="service-cta">
                   <Link to="/contact" className="btn btn-primary">
-                    Get Quote for {service.title}
+                    Get Quote for {service.title} <FontAwesomeIcon icon={faArrowRight} />
                   </Link>
                 </div>
               </div>
@@ -206,7 +225,7 @@ const ServicesPage: React.FC = () => {
             <h2>Ready to Start Your Project?</h2>
             <p>Contact us today to discuss your electromechanical needs</p>
             <Link to="/contact" className="btn btn-primary btn-large">
-              Get Free Consultation
+              Get Free Consultation <FontAwesomeIcon icon={faArrowRight} />
             </Link>
           </div>
         </div>

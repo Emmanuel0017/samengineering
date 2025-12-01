@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import './Contact.css';
+import { faFacebook, faLinkedin, faXTwitter } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faClock, faEnvelope, faLocationPin, faPhone } from '@fortawesome/free-solid-svg-icons';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -36,9 +39,13 @@ const Contact: React.FC = () => {
   return (
     <div className="contact-page">
       <section className="page-hero">
+        <div className="hero-background"></div>
+        <div className="hero-overlay"></div>
         <div className="container">
-          <h1>Contact Us</h1>
-          <p>Get in touch with our expert team</p>
+          <div className="hero-content">
+            <h1>Contact Us</h1>
+            <p>Get in touch with our expert team</p>
+          </div>
         </div>
       </section>
 
@@ -54,31 +61,31 @@ const Contact: React.FC = () => {
               
               <div className="contact-details">
                 <div className="contact-item">
-                  <div className="contact-icon">📍</div>
+                  <div className="contact-icon"><FontAwesomeIcon icon={faLocationPin}/></div>
                   <div className="contact-text">
                     <h4>Office Address</h4>
-                    <p>123 Industrial Way<br />Tech City, TC 12345</p>
+                    <p>Naperi<br />Private Bag 303, Blantyre</p>
                   </div>
                 </div>
                 
                 <div className="contact-item">
-                  <div className="contact-icon">📞</div>
+                  <div className="contact-icon"><FontAwesomeIcon icon={faPhone}/></div>
                   <div className="contact-text">
                     <h4>Phone Number</h4>
-                    <p>+1 (555) 123-4567</p>
+                    <p>+265 991 548 657</p>
                   </div>
                 </div>
                 
                 <div className="contact-item">
-                  <div className="contact-icon">✉️</div>
+                  <div className="contact-icon"><FontAwesomeIcon icon={faEnvelope}/></div>
                   <div className="contact-text">
                     <h4>Email Address</h4>
-                    <p>info@powertech.com</p>
+                    <p>info@samengineering.com</p>
                   </div>
                 </div>
                 
                 <div className="contact-item">
-                  <div className="contact-icon">🕒</div>
+                  <div className="contact-icon"><FontAwesomeIcon icon={faClock}/></div>
                   <div className="contact-text">
                     <h4>Business Hours</h4>
                     <p>Monday - Friday: 8:00 AM - 6:00 PM<br />Emergency Services: 24/7</p>
@@ -89,9 +96,9 @@ const Contact: React.FC = () => {
               <div className="social-contact">
                 <h4>Follow Us</h4>
                 <div className="social-links">
-                  <a href="#" className="social-link">LinkedIn</a>
-                  <a href="#" className="social-link">Twitter</a>
-                  <a href="#" className="social-link">Facebook</a>
+                  <a href="#" className="social-link"><FontAwesomeIcon icon={faLinkedin} size='2x'/></a>
+                  <a href="#" className="social-link"><FontAwesomeIcon icon={faFacebook} size='2x'/></a>
+                  <a href="#" className="social-link"><FontAwesomeIcon icon={faXTwitter} size='2x'/></a>
                 </div>
               </div>
             </div>
@@ -195,10 +202,10 @@ const Contact: React.FC = () => {
           <h2 className="section-title">Our Location</h2>
           <div className="map-placeholder">
             <div className="map-content">
-              <span className="map-icon">🗺️</span>
-              <h3>Tech City Office</h3>
-              <p>123 Industrial Way, Tech City, TC 12345</p>
-              <p className="map-note">Interactive map would be embedded here</p>
+              <div className="map-icon">📍</div>
+              <h3>Blantyre City Office</h3>
+              <p>Naperi, Private Bag 303, Blantyre</p>
+              {/* <p className="map-note">Interactive map would be embedded here</p> */}
             </div>
           </div>
         </div>
@@ -213,7 +220,7 @@ const Contact: React.FC = () => {
               <p>Need immediate assistance? Our emergency team is available 24/7 for urgent electromechanical issues.</p>
             </div>
             <div className="emergency-contact">
-              <div className="emergency-phone">+1 (555) 123-EMER</div>
+              <div className="emergency-phone">+265 991 548 657</div>
               <button className="btn btn-primary">Call Now</button>
             </div>
           </div>

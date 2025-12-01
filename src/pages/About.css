@@ -1,36 +1,98 @@
 .page-hero {
-  background: linear-gradient(135deg, var(--dark-blue) 0%, #2a4a7c 100%);
-  color: var(--white);
-  padding: 120px 0 80px;
+  position: relative;
+  height: 60vh;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
   text-align: center;
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(26, 52, 89, 0.85) 0%, rgba(42, 74, 124, 0.85) 100%),
+              url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Alternative background images for About page:
+   - Engineering team: https://images.unsplash.com/photo-1581094794329-c8112a89af12
+   - Blueprint meeting: https://images.unsplash.com/photo-1581094794329-c8112a89af12
+   - Engineering drawings: https://images.unsplash.com/photo-1580629905307-d7c8d8e7c0d9
+   - Modern engineering: https://images.unsplash.com/photo-1581291518633-83b4ebfd1c23
+   - Industrial design: https://images.unsplash.com/photo-1581094794329-c8112a89af12
+*/
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .page-hero h1 {
   color: var(--white);
   margin-bottom: 1rem;
+  font-size: 3.5rem;
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .page-hero p {
   color: var(--neutral-medium);
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   margin: 0;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .about-grid {
   display: grid;
   gap: 4rem;
+  margin-top: 4rem;
 }
 
 .about-story h2,
 .about-mission h2 {
   color: var(--dark-blue);
   margin-bottom: 1.5rem;
+  font-size: 2.2rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.about-story h2::after,
+.about-mission h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background-color: var(--orange);
+  border-radius: 2px;
 }
 
 .about-story p {
   margin-bottom: 1.5rem;
   line-height: 1.7;
   color: var(--text-light);
+  font-size: 1.05rem;
 }
 
 .mission-vision-grid {
@@ -42,19 +104,68 @@
 .mission-card,
 .vision-card {
   background: var(--neutral-light);
-  padding: 2rem;
-  border-radius: 10px;
+  padding: 2.5rem;
+  border-radius: 12px;
   border-left: 4px solid var(--orange);
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.mission-card:hover,
+.vision-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
 .mission-card h3,
 .vision-card h3 {
   color: var(--dark-blue);
   margin-bottom: 1rem;
+  font-size: 1.4rem;
+}
+
+.mission-icon,
+.vision-icon {
+  font-size: 3rem;
+  color: var(--orange);
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+.mission-card p,
+.vision-card p {
+  color: var(--text-light);
+  line-height: 1.6;
+  font-size: 1.05rem;
 }
 
 .values-section {
   background-color: var(--neutral-light);
+  padding: 5rem 0;
+  margin-top: 4rem;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--dark-blue);
+  font-size: 2.2rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background-color: var(--orange);
+  border-radius: 2px;
 }
 
 .values-grid {
@@ -65,61 +176,110 @@
 
 .value-card {
   background: var(--white);
-  padding: 2rem;
-  border-radius: 10px;
+  padding: 2.5rem 2rem;
+  border-radius: 12px;
   text-align: center;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-top: 4px solid var(--orange);
 }
 
 .value-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
 
 .value-icon {
   font-size: 3rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   display: block;
+  color: var(--dark-blue);
+}
+
+.value-icon svg {
+  width: 1em;
+  height: 1em;
 }
 
 .value-card h3 {
   color: var(--dark-blue);
   margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.value-card p {
+  color: var(--text-light);
+  line-height: 1.6;
+  font-size: 1rem;
 }
 
 .team-section {
   background-color: var(--white);
+  padding: 5rem 0;
 }
 
 .team-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
+  gap: 3rem;
 }
 
 .team-member {
   text-align: center;
-  padding: 2rem;
+  padding: 2.5rem;
+  background: var(--neutral-light);
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
 .member-photo {
-  font-size: 4rem;
-  margin-bottom: 1rem;
+  font-size: 4.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--dark-blue);
+  background: var(--white);
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  border: 4px solid var(--orange);
+}
+
+.member-photo svg {
+  width: 1em;
+  height: 1em;
 }
 
 .team-member h3 {
   color: var(--dark-blue);
   margin-bottom: 0.5rem;
+  font-size: 1.4rem;
 }
 
 .member-role {
   color: var(--orange);
   font-weight: 600;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.team-member p {
+  color: var(--text-light);
+  line-height: 1.6;
+  font-size: 1rem;
 }
 
 .certifications-section {
   background-color: var(--neutral-light);
+  padding: 5rem 0;
 }
 
 .certifications-grid {
@@ -130,25 +290,62 @@
 
 .certification {
   background: var(--white);
-  padding: 2rem;
-  border-radius: 10px;
+  padding: 2.5rem 2rem;
+  border-radius: 12px;
   text-align: center;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+  border-top: 4px solid var(--orange);
+}
+
+.certification:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
 .cert-icon {
   font-size: 3rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   display: block;
+  color: var(--dark-blue);
+}
+
+.cert-icon svg {
+  width: 1em;
+  height: 1em;
 }
 
 .certification h3 {
   color: var(--dark-blue);
   margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.certification p {
+  color: var(--text-light);
+  line-height: 1.6;
+  font-size: 1rem;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .page-hero {
+    height: 50vh;
+    min-height: 350px;
+  }
+  
+  .page-hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .page-hero p {
+    font-size: 1.2rem;
+  }
+  
+  .hero-background {
+    background-attachment: scroll; /* Disable fixed background on mobile for performance */
+  }
+  
   .mission-vision-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
@@ -161,7 +358,49 @@
     gap: 1.5rem;
   }
   
+  .about-grid {
+    gap: 3rem;
+    margin-top: 3rem;
+  }
+  
+  .about-story h2,
+  .about-mission h2,
+  .section-title {
+    font-size: 1.8rem;
+  }
+  
+  .values-section,
+  .team-section,
+  .certifications-section {
+    padding: 4rem 0;
+  }
+}
+
+@media (max-width: 480px) {
   .page-hero {
-    padding: 100px 0 60px;
+    height: 40vh;
+    min-height: 300px;
+  }
+  
+  .page-hero h1 {
+    font-size: 2rem;
+  }
+  
+  .page-hero p {
+    font-size: 1.1rem;
+  }
+  
+  .member-photo {
+    width: 100px;
+    height: 100px;
+    font-size: 3.5rem;
+  }
+  
+  .mission-card,
+  .vision-card,
+  .value-card,
+  .team-member,
+  .certification {
+    padding: 2rem 1.5rem;
   }
 }

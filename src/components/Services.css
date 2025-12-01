@@ -28,6 +28,12 @@
   font-size: 3rem;
   margin-bottom: 1.5rem;
   display: block;
+  color: var(--dark-blue); /* Add this line */
+}
+
+.service-icon svg {
+  width: 1em !important; /* Ensure consistent sizing */
+  height: 1em !important;
 }
 
 .service-title {
@@ -47,10 +53,21 @@
   text-decoration: none;
   font-weight: 600;
   transition: color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .service-link:hover {
   color: var(--dark-blue);
+}
+
+.service-link svg {
+  transition: transform 0.3s ease;
+}
+
+.service-link:hover svg {
+  transform: translateX(5px);
 }
 
 .services-cta {

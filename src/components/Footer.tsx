@@ -56,11 +56,11 @@ const Footer: React.FC = () => {
               </div>
               <div className="f-contact-item">
                 <span className="f-contact-icon"><FontAwesomeIcon icon={faPhone}/></span>
-                +265 991 548 657
+                <a href="tel:+265 991 548 657">+265 991 548 657</a>
               </div>
               <div className="f-contact-item">
                 <span className="f-contact-icon"><FontAwesomeIcon icon={faEnvelope}/></span>
-                info@samengineering.com
+                <a href="mailto:info@samengineering.com">info@samengineering.com</a>
               </div>
             </div>
           </div>

@@ -23,11 +23,11 @@ const ContactCTA: React.FC = () => {
             <div className="cta-info">
               <div className="info-item">
                 <span className="info-icon"><FontAwesomeIcon icon={faPhone}/></span>
-                <span>+265 991 548 657</span>
+                <span><a href="tel:+265 991 548 657">+265 991 548 657</a></span>
               </div>
               <div className="info-item">
                 <span className="info-icon"><FontAwesomeIcon icon={faEnvelope}/></span>
-                <span>info@samengineering.com</span>
+                <span><a href="mailto:info@samengineering.com">info@samengineering.com</a></span>
               </div>
             </div>
           </div>

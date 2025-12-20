@@ -72,7 +72,7 @@ const Contact: React.FC = () => {
                   <div className="contact-icon"><FontAwesomeIcon icon={faPhone}/></div>
                   <div className="contact-text">
                     <h4>Phone Number</h4>
-                    <p>+265 991 548 657</p>
+                    <p><a href="tel:+265 991 548 657">+265 991 548 657</a></p>
                   </div>
                 </div>
                 
@@ -80,7 +80,7 @@ const Contact: React.FC = () => {
                   <div className="contact-icon"><FontAwesomeIcon icon={faEnvelope}/></div>
                   <div className="contact-text">
                     <h4>Email Address</h4>
-                    <p>info@samengineering.com</p>
+                    <p><a href="mailto:info@samengineering.com">info@samengineering.com</a></p>
                   </div>
                 </div>
                 

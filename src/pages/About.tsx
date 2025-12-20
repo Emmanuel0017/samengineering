@@ -72,7 +72,7 @@ const About: React.FC = () => {
 
       <section className="section values-section">
         <div className="container">
-          <h2 className="section-title">Our Values</h2>
+          <h2 className="about-section-title">Our Values</h2>
           <div className="values-grid">
             <div className="value-card">
               <span className="value-icon">
@@ -108,7 +108,7 @@ const About: React.FC = () => {
 
       <section className="section team-section">
         <div className="container">
-          <h2 className="section-title">Leadership Team</h2>
+          <h2 className="about-section-title">Leadership Team</h2>
           <div className="team-grid">
             <div className="team-member">
               <div className="member-photo">
@@ -140,7 +140,7 @@ const About: React.FC = () => {
 
       <section className="section certifications-section">
         <div className="container">
-          <h2 className="section-title">Certifications</h2>
+          <h2 className="about-section-title">Certifications</h2>
           {/* <div className="certifications-grid">
             <div className="certification">
               <span className="cert-icon">

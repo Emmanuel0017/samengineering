@@ -199,7 +199,7 @@ const Contact: React.FC = () => {
 
       <section className="map-section">
         <div className="container">
-          <h2 className="section-title">Our Location</h2>
+          <h2 className="cntc-section-title">Our Location</h2>
           <div className="map-placeholder">
             <div className="map-content">
               <div className="map-icon">📍</div>

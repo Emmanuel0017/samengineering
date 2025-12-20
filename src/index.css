@@ -5,8 +5,10 @@
 }
 
 :root {
-  --dark-blue: #1D3557;
-  --orange: #FCA311;
+  --dark-blue: #000000;
+  --dark: rgb(29, 27, 27);
+  --grey: #bababa;
+  --orange: #bababa;
   --neutral-light: #F8F9FA;
   --neutral-medium: #E5E5E5;
   --white: #FFFFFF;
@@ -55,7 +57,6 @@ p {
 .btn {
   display: inline-block;
   padding: 12px 30px;
-  border: none;
   border-radius: 5px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;

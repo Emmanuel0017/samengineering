@@ -164,7 +164,7 @@ const ServicesPage: React.FC = () => {
           <div className="services-intro">
             <h2>Expert Electromechanical Solutions</h2>
             <p>
-              With over 18 years of experience, S.A.M Engineering delivers comprehensive 
+              With our years of experience, S.A.M Engineering delivers comprehensive 
               electromechanical services that combine technical expertise with 
               innovative solutions. Our team of certified professionals ensures 
               every project meets the highest standards of quality and safety.

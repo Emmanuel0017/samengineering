@@ -14,7 +14,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, rgba(26, 52, 89, 0.85) 0%, rgba(42, 74, 124, 0.85) 100%),
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.85) 0%, rgba(50, 50, 50, 0.85) 100%),
               url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
   background-size: cover;
   background-position: center;
@@ -22,21 +22,13 @@
   background-attachment: fixed;
 }
 
-/* Alternative background images for About page:
-   - Engineering team: https://images.unsplash.com/photo-1581094794329-c8112a89af12
-   - Blueprint meeting: https://images.unsplash.com/photo-1581094794329-c8112a89af12
-   - Engineering drawings: https://images.unsplash.com/photo-1580629905307-d7c8d8e7c0d9
-   - Modern engineering: https://images.unsplash.com/photo-1581291518633-83b4ebfd1c23
-   - Industrial design: https://images.unsplash.com/photo-1581094794329-c8112a89af12
-*/
-
 .hero-overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23bababa' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
 .hero-content {
@@ -47,7 +39,7 @@
 }
 
 .page-hero h1 {
-  color: var(--white);
+  color: #ffffff;
   margin-bottom: 1rem;
   font-size: 3.5rem;
   font-weight: 700;
@@ -55,7 +47,7 @@
 }
 
 .page-hero p {
-  color: var(--neutral-medium);
+  color: #bababa;
   font-size: 1.5rem;
   margin: 0;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
@@ -69,11 +61,11 @@
 
 .about-story h2,
 .about-mission h2 {
-  color: var(--dark-blue);
-  margin-bottom: 1.5rem;
+  color: #000000;
+  margin-bottom: 2.5rem; /* INCREASED from 1.5rem to 2.5rem */
   font-size: 2.2rem;
   position: relative;
-  padding-bottom: 0.5rem;
+  padding-bottom: 1.5rem; /* INCREASED from 0.5rem to 1.5rem */
 }
 
 .about-story h2::after,
@@ -84,14 +76,14 @@
   left: 0;
   width: 60px;
   height: 4px;
-  background-color: var(--orange);
+  background-color: #bababa;
   border-radius: 2px;
 }
 
 .about-story p {
   margin-bottom: 1.5rem;
   line-height: 1.7;
-  color: var(--text-light);
+  color: #666666;
   font-size: 1.05rem;
 }
 
@@ -103,10 +95,10 @@
 
 .mission-card,
 .vision-card {
-  background: var(--neutral-light);
+  background: #f5f5f5;
   padding: 2.5rem;
   border-radius: 12px;
-  border-left: 4px solid var(--orange);
+  border-left: 4px solid #bababa;
   text-align: center;
   position: relative;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -121,42 +113,57 @@
 
 .mission-card h3,
 .vision-card h3 {
-  color: var(--dark-blue);
-  margin-bottom: 1rem;
+  color: #000000;
+  margin-bottom: 1.5rem; /* ADDED margin-bottom */
   font-size: 1.4rem;
+  position: relative;
+  padding-bottom: 1rem; /* ADDED padding for spacing */
+}
+
+.mission-card h3::after,
+.vision-card h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 3px;
+  background-color: #bababa;
+  border-radius: 2px;
 }
 
 .mission-icon,
 .vision-icon {
   font-size: 3rem;
-  color: var(--orange);
+  color: #bababa;
   margin-bottom: 1.5rem;
   display: block;
 }
 
 .mission-card p,
 .vision-card p {
-  color: var(--text-light);
+  color: #666666;
   line-height: 1.6;
   font-size: 1.05rem;
 }
 
 .values-section {
-  background-color: var(--neutral-light);
+  background-color: #f5f5f5;
   padding: 5rem 0;
   margin-top: 4rem;
 }
 
-.section-title {
+.about-section-title {
   text-align: center;
-  margin-bottom: 3rem;
-  color: var(--dark-blue);
+  margin-bottom: 4rem; /* INCREASED from 3rem to 4rem */
+  color: #000000;
   font-size: 2.2rem;
   position: relative;
-  padding-bottom: 0.5rem;
+  padding-bottom: 1.5rem; /* INCREASED from 1rem to 1.5rem */
 }
 
-.section-title::after {
+.about-section-title::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -164,7 +171,7 @@
   transform: translateX(-50%);
   width: 60px;
   height: 4px;
-  background-color: var(--orange);
+  background-color: #bababa;
   border-radius: 2px;
 }
 
@@ -175,13 +182,13 @@
 }
 
 .value-card {
-  background: var(--white);
+  background: #ffffff;
   padding: 2.5rem 2rem;
   border-radius: 12px;
   text-align: center;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border-top: 4px solid var(--orange);
+  border-top: 4px solid #bababa;
 }
 
 .value-card:hover {
@@ -193,28 +200,37 @@
   font-size: 3rem;
   margin-bottom: 1.5rem;
   display: block;
-  color: var(--dark-blue);
-}
-
-.value-icon svg {
-  width: 1em;
-  height: 1em;
+  color: #000000;
 }
 
 .value-card h3 {
-  color: var(--dark-blue);
-  margin-bottom: 1rem;
+  color: #000000;
+  margin-bottom: 1.5rem; /* ADDED margin-bottom */
   font-size: 1.3rem;
+  position: relative;
+  padding-bottom: 0.8rem; /* ADDED padding for spacing */
+}
+
+.value-card h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 3px;
+  background-color: #bababa;
+  border-radius: 2px;
 }
 
 .value-card p {
-  color: var(--text-light);
+  color: #666666;
   line-height: 1.6;
   font-size: 1rem;
 }
 
 .team-section {
-  background-color: var(--white);
+  background-color: #ffffff;
   padding: 5rem 0;
 }
 
@@ -227,7 +243,7 @@
 .team-member {
   text-align: center;
   padding: 2.5rem;
-  background: var(--neutral-light);
+  background: #f5f5f5;
   border-radius: 12px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease;
@@ -241,8 +257,8 @@
 .member-photo {
   font-size: 4.5rem;
   margin-bottom: 1.5rem;
-  color: var(--dark-blue);
-  background: var(--white);
+  color: #000000;
+  background: #ffffff;
   width: 120px;
   height: 120px;
   border-radius: 50%;
@@ -250,35 +266,44 @@
   align-items: center;
   justify-content: center;
   margin: 0 auto 1.5rem;
-  border: 4px solid var(--orange);
-}
-
-.member-photo svg {
-  width: 1em;
-  height: 1em;
+  border: 4px solid #bababa;
 }
 
 .team-member h3 {
-  color: var(--dark-blue);
-  margin-bottom: 0.5rem;
+  color: #000000;
+  margin-bottom: 0.8rem; /* ADDED margin-bottom */
   font-size: 1.4rem;
 }
 
 .member-role {
-  color: var(--orange);
+  color: #bababa;
   font-weight: 600;
   margin-bottom: 1.5rem;
   font-size: 1.1rem;
+  position: relative;
+  padding-bottom: 0.8rem; /* ADDED padding for spacing */
+}
+
+.member-role::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 2px;
+  background-color: #bababa;
+  border-radius: 2px;
 }
 
 .team-member p {
-  color: var(--text-light);
+  color: #666666;
   line-height: 1.6;
   font-size: 1rem;
 }
 
 .certifications-section {
-  background-color: var(--neutral-light);
+  background-color: #f5f5f5;
   padding: 5rem 0;
 }
 
@@ -289,13 +314,13 @@
 }
 
 .certification {
-  background: var(--white);
+  background: #ffffff;
   padding: 2.5rem 2rem;
   border-radius: 12px;
   text-align: center;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease;
-  border-top: 4px solid var(--orange);
+  border-top: 4px solid #bababa;
 }
 
 .certification:hover {
@@ -307,22 +332,31 @@
   font-size: 3rem;
   margin-bottom: 1.5rem;
   display: block;
-  color: var(--dark-blue);
-}
-
-.cert-icon svg {
-  width: 1em;
-  height: 1em;
+  color: #000000;
 }
 
 .certification h3 {
-  color: var(--dark-blue);
-  margin-bottom: 1rem;
+  color: #000000;
+  margin-bottom: 1.5rem; /* ADDED margin-bottom */
   font-size: 1.3rem;
+  position: relative;
+  padding-bottom: 0.8rem; /* ADDED padding for spacing */
+}
+
+.certification h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 3px;
+  background-color: #bababa;
+  border-radius: 2px;
 }
 
 .certification p {
-  color: var(--text-light);
+  color: #666666;
   line-height: 1.6;
   font-size: 1rem;
 }
@@ -343,7 +377,7 @@
   }
   
   .hero-background {
-    background-attachment: scroll; /* Disable fixed background on mobile for performance */
+    background-attachment: scroll;
   }
   
   .mission-vision-grid {
@@ -367,12 +401,23 @@
   .about-mission h2,
   .section-title {
     font-size: 1.8rem;
+    margin-bottom: 2rem; /* Adjusted for mobile */
+    padding-bottom: 1.2rem; /* Adjusted for mobile */
   }
   
   .values-section,
   .team-section,
   .certifications-section {
     padding: 4rem 0;
+  }
+  
+  .mission-card h3,
+  .vision-card h3,
+  .value-card h3,
+  .team-member h3,
+  .certification h3 {
+    margin-bottom: 1.2rem;
+    padding-bottom: 0.8rem;
   }
 }
 

@@ -12,8 +12,8 @@ const Footer: React.FC = () => {
         <div className="footer-content">
           <div className="footer-section">
             <div className="footer-logo">
-              <span className="logo-icon"></span>
-              S.A.M Engineering
+              <span className="logo-icon">S.A.M Engineering</span>
+              
             </div>
             <p className="footer-description">
               Leading electromechanical contracting company providing innovative solutions 
@@ -49,17 +49,17 @@ const Footer: React.FC = () => {
 
           <div className="footer-section">
             <h4>Contact Info</h4>
-            <div className="contact-info">
-              <div className="contact-item">
-                <span className="contact-icon"><FontAwesomeIcon icon={faLocationPin}/></span>
+            <div className="f-contact-info">
+              <div className="f-contact-item">
+                <span className="f-contact-icon"><FontAwesomeIcon icon={faLocationPin}/></span>
                 naperi, p/bag 303, Blantyre
               </div>
-              <div className="contact-item">
-                <span className="contact-icon"><FontAwesomeIcon icon={faPhone}/></span>
+              <div className="f-contact-item">
+                <span className="f-contact-icon"><FontAwesomeIcon icon={faPhone}/></span>
                 +265 991 548 657
               </div>
-              <div className="contact-item">
-                <span className="contact-icon"><FontAwesomeIcon icon={faEnvelope}/></span>
+              <div className="f-contact-item">
+                <span className="f-contact-icon"><FontAwesomeIcon icon={faEnvelope}/></span>
                 info@samengineering.com
               </div>
             </div>

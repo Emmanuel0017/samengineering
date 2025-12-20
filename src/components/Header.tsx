@@ -50,7 +50,7 @@ const Header: React.FC = () => {
       <div className="container">
         <div className="header-content">
           <Link to="/" className="logo" onClick={closeMenu}>
-            S.A.M
+            <img src="assets/logo/logo.png" alt="S.A.M" />
           </Link>
           
           <div className="nav-wrapper" ref={menuRef}>

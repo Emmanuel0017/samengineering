@@ -13,7 +13,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, rgba(26, 52, 89, 0.85) 0%, rgba(42, 74, 124, 0.85) 100%),
+  /* REMOVED BLUE GRADIENT - using only black overlay with your image */
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.7) 100%),
               url('../../public/assets/5.jpeg');
   background-size: cover;
   background-position: center;
@@ -21,22 +22,30 @@
   background-attachment: fixed;
 }
 
-/* Alternative engineering background images (choose one):
-   - Electrical control room: https://images.unsplash.com/photo-1581094794329-c8112a89af12
-   - Industrial engineering: https://images.unsplash.com/photo-1581094794329-c8112a89af12
-   - Factory automation: https://images.unsplash.com/photo-1581094794329-c8112a89af12
-   - Mechanical engineering: https://images.unsplash.com/photo-1580629905307-d7c8d8e7c0d9
-   - Power plant: https://images.unsplash.com/photo-1581291518633-83b4ebfd1c23
-*/
-
-.hero-overlay {
+/* Alternative if you want a pure black/white/gray overlay */
+.hero-background {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  /* Using your logo colors for the gradient overlay */
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.9) 0%, rgba(186, 186, 186, 0.2) 100%),
+              url('../../public/assets/5.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
+
+ .hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23bababa' fill-opacity='0.05'%3E%3Ccircle cx='40' cy='40' r='1.5'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+} 
 
 .hero-content {
   position: relative;
@@ -47,23 +56,24 @@
 .hero-title {
   font-size: 3.5rem;
   font-weight: 700;
-  color: var(--white);
+  color: var(--grey); /* Logo light color */
   margin-bottom: 1.5rem;
   line-height: 1.2;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
 }
 
 .highlight {
-  color: var(--orange);
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  color: #ffffff; /* White for contrast */
+  font-weight: 800;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
 }
 
 .hero-description {
   font-size: 1.2rem;
-  color: var(--neutral-medium);
+  color: var(--grey); /* Logo light color */
   margin-bottom: 2.5rem;
   line-height: 1.6;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
 }
 
 .hero-actions {
@@ -92,38 +102,42 @@
 }
 
 .btn-primary {
-  background-color: var(--orange);
-  color: var(--white);
-  border: 2px solid var(--orange);
+  background-color: #000000; /* Logo dark color */
+  color: var(--grey); /* Logo light color */
+  border: 2px solid #000000;
 }
 
 .btn-primary:hover {
-  background-color: var(--dark-orange);
-  border-color: var(--dark-orange);
+  background-color: #1a1a1a; /* Dark gray instead of pure black */
+  border-color: #1a1a1a;
+  color: #ffffff; /* White on hover for better contrast */
   transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
 }
 
 .btn-secondary {
   background-color: transparent;
-  color: var(--white);
-  border: 2px solid var(--white);
+  color: var(--grey); /* Logo light color */
+  border: 2px solid var(--grey);
 }
 
 .btn-secondary:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(186, 186, 186, 0.15);
+  color: #ffffff; /* White on hover */
+  border-color: #ffffff;
   transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 25px rgba(186, 186, 186, 0.2);
 }
 
 .hero-stats {
   display: flex;
   gap: 2rem;
-  background: rgba(26, 52, 89, 0.8);
+  background: rgba(0, 0, 0, 0.85); /* Black background with transparency */
   padding: 2rem;
   border-radius: 10px;
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(186, 186, 186, 0.3); /* Light border using logo light color */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
 .stat {
@@ -137,16 +151,16 @@
   font-family: 'Montserrat', sans-serif;
   font-size: 2rem;
   font-weight: 700;
-  color: var(--orange);
+  color: #ffffff; /* White for numbers for better readability */
   line-height: 1;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .stat-label {
   font-size: 0.9rem;
-  color: var(--neutral-medium);
+  color: var(--grey); /* Logo light color */
   margin-top: 0.5rem;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 /* Responsive Design */
@@ -178,6 +192,7 @@
     flex-direction: column;
     gap: 1.5rem;
     padding: 1.5rem;
+    backdrop-filter: blur(8px);
   }
   
   .stat {

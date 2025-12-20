@@ -96,9 +96,9 @@ const Contact: React.FC = () => {
               <div className="social-contact">
                 <h4>Follow Us</h4>
                 <div className="social-links">
-                  <a href="#" className="social-link"><FontAwesomeIcon icon={faLinkedin} size='2x'/></a>
-                  <a href="#" className="social-link"><FontAwesomeIcon icon={faFacebook} size='2x'/></a>
-                  <a href="#" className="social-link"><FontAwesomeIcon icon={faXTwitter} size='2x'/></a>
+                  <a href="/" className="social-link"><FontAwesomeIcon icon={faLinkedin} size='2x'/></a>
+                  <a href="/" className="social-link"><FontAwesomeIcon icon={faFacebook} size='2x'/></a>
+                  <a href="/" className="social-link"><FontAwesomeIcon icon={faXTwitter} size='2x'/></a>
                 </div>
               </div>
             </div>
@@ -221,7 +221,7 @@ const Contact: React.FC = () => {
             </div>
             <div className="emergency-contact">
               <div className="emergency-phone">+265 991 548 657</div>
-              <button className="btn btn-primary">Call Now</button>
+              <button className="btn btn-primary"><a href="tel:+265991548657">Call Now</a></button>
             </div>
           </div>
         </div>

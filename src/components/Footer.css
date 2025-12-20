@@ -27,9 +27,16 @@
   gap: 0.5rem;
 }
 
+.footer-logo img {
+  max-height: 200px;
+  position: absolute;
+  left: 4rem;
+}
+
 .footer-description {
   color: var(--neutral-medium);
   margin-bottom: 1.5rem;
+  margin-top: 4rem;
   line-height: 1.6;
 }
 

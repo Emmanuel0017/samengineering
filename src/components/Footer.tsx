@@ -12,8 +12,8 @@ const Footer: React.FC = () => {
         <div className="footer-content">
           <div className="footer-section">
             <div className="footer-logo">
-              <span className="logo-icon">S.A.M Engineering</span>
-              
+              <span className="logo-icon"></span>
+              <img src="./assets/logo/logo-dark.png" alt="logo" />
             </div>
             <p className="footer-description">
               Leading electromechanical contracting company providing innovative solutions 

@@ -30,7 +30,7 @@
 .footer-logo img {
   max-height: 200px;
   position: absolute;
-  left: 4rem;
+  /* left: 4rem; */
 }
 
 .footer-description {

@@ -1,6 +1,6 @@
 .contact-cta {
-  background: linear-gradient(135deg, #000000 0%, #333333 100%);
-  color: #ffffff;
+  background: linear-gradient(135deg, var(--dark-blue) 0%, var(--text-dark) 100%);
+  color: var(--white);
 }
 
 .cta-content {
@@ -11,12 +11,12 @@
 }
 
 .cta-text h2 {
-  color: #ffffff;
+  color: var(--white);
   margin-bottom: 1rem;
 }
 
 .cta-text p {
-  color: #bababa; /* Logo light color */
+  color: var(--orange); 
   font-size: 1.1rem;
   margin: 0;
 }
@@ -45,7 +45,15 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: #bababa; /* Logo light color */
+  color: var(--white); 
+}
+
+.info-item a {
+  color: var(--white);
+}
+
+.info-item a:hover {
+  color: var(--orange);
 }
 
 .info-icon {

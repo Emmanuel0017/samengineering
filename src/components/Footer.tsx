@@ -52,15 +52,19 @@ const Footer: React.FC = () => {
             <div className="f-contact-info">
               <div className="f-contact-item">
                 <span className="f-contact-icon"><FontAwesomeIcon icon={faLocationPin}/></span>
-                naperi, p/bag 303, Blantyre
+                old naperi, House NP/337, Blantyre
               </div>
               <div className="f-contact-item">
                 <span className="f-contact-icon"><FontAwesomeIcon icon={faPhone}/></span>
-                <a href="tel:+265 991 548 657">+265 991 548 657</a>
+                <a href="tel:+265 994 002 138">+265 994 002 138</a>
               </div>
               <div className="f-contact-item">
                 <span className="f-contact-icon"><FontAwesomeIcon icon={faEnvelope}/></span>
                 <a href="mailto:info@samengineering.com">info@samengineering.com</a>
+              </div>
+              <div className="f-contact-item">
+                <span className="f-contact-icon"><FontAwesomeIcon icon={faEnvelope}/></span>
+                <a href="mailto:info.samengineering@gmail.com">info.samengineering@gmail.com</a>
               </div>
             </div>
           </div>
@@ -83,7 +87,7 @@ const Footer: React.FC = () => {
         </div>
         
         <div className="footer-bottom">
-          <p>&copy; 2025 S.A.M Engineering. All rights reserved.</p>
+          <p>&copy; 2026 S.A.M Engineering. All rights reserved.</p>
         </div>
       </div>
     </footer>

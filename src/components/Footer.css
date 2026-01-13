@@ -1,5 +1,5 @@
 .footer {
-  background-color: var(--dark);
+  background-color: var(--dark-blue);
   color: var(--white);
   padding: 60px 0 20px;
 }
@@ -77,6 +77,16 @@
   gap: 1rem;
 }
 
+.f-contact-info a{
+    color: var(--white);
+
+}
+
+.f-contact-info a:hover{
+    color: var(--orange);
+
+}
+
 .f-contact-item {
   display: flex;
   align-items: flex-start;
@@ -125,7 +135,10 @@
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding-top: 2rem;
   text-align: center;
-  color: var(--neutral-medium);
+}
+.footer-bottom p {
+    color: var(--white);
+
 }
 
 /* Responsive Design */

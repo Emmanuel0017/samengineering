@@ -5,13 +5,13 @@
   top: 0;
   z-index: 1000;
   padding: 1rem 0;
+  max-height: 130px;
 }
 
 .header-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative;
 }
 
 .logo {
@@ -19,10 +19,11 @@
   align-items: center;
   text-decoration: none;
   z-index: 1001;
+  position: relative;
 }
 
 .logo img {
-  height: 80px; /* Adjust this based on your logo size */
+  height: 80px; 
   width: auto;
   max-width: 100%;
   object-fit: contain;
@@ -157,13 +158,11 @@
     display: none;
   }
 
-  /* Adjust logo size for mobile if needed */
   .logo img {
-    height: 35px; /* Slightly smaller for mobile */
+    height: 40px; 
   }
 }
 
-/* Tablet Styles */
 @media (min-width: 769px) and (max-width: 1024px) {
   .nav {
     gap: 1.5rem;
@@ -179,6 +178,6 @@
   }
   
   .logo img {
-    height: 35px;
+    height: 50px;
   }
 }

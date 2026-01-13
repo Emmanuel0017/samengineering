@@ -1,0 +1,106 @@
+.chatbot {
+  display: flex;
+  flex-direction: column;
+  /* height: 100%; */
+  font-family: "Open Sans", sans-serif;
+  background: #f8f9fb;
+}
+
+/* =========================
+   Messages area
+========================= */
+.messages {
+  flex: 1;
+  padding: 12px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Scrollbar (optional but nice) */
+.messages::-webkit-scrollbar {
+  width: 6px;
+}
+
+.messages::-webkit-scrollbar-thumb {
+  background: var(--dark-blue);
+  border-radius: 10px;
+}
+
+/* =========================
+   Message bubbles
+========================= */
+.message {
+  max-width: 75%;
+  padding: 10px 14px;
+  border-radius: 14px;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  word-wrap: break-word;
+}
+
+/* Bot message */
+.message.bot {
+  align-self: flex-start;
+  background: var(--white);
+  color: var(--dark-blue);
+  border: 1px solid #e0e0e0;
+}
+
+/* User message */
+.message.user {
+  align-self: flex-end;
+  background: var(--dark-blue);
+  color: var(--white);
+}
+
+.message.bot:last-child {
+  font-style: italic;
+  opacity: 0.8;
+}
+
+/* =========================
+   Input row
+========================= */
+.input-row {
+  display: flex;
+  padding: 10px;
+  border-top: 1px solid #e0e0e0;
+  background: var(--white);
+  gap: 8px;
+}
+
+.input-row input {
+  flex: 1;
+  padding: 10px 12px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 0.9rem;
+}
+
+.input-row input:focus {
+  border-color: #1d3557;
+}
+
+/* Send button */
+.input-row button {
+  padding: 0 16px;
+  border-radius: 20px;
+  border: none;
+  background: var(--dark-blue);
+  color: var(--white);
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.input-row button:hover {
+  background: var(--dark-blue);
+}
+
+.input-row button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

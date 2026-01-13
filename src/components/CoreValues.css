@@ -1,0 +1,155 @@
+.core-values-section {
+  background-color: var(--background-light);
+  padding: 4rem; 
+}
+
+/* TITLE */
+.core-values-title {
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--dark-blue);
+  font-size: 2rem; /* smaller */
+  position: relative;
+  padding-bottom: 1.2rem;
+}
+
+.core-values-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 52px;
+  height: 3px;
+  background-color: var(--grey);
+  border-radius: 2px;
+}
+
+/* ============================= */
+/* LAYOUT */
+/* ============================= */
+.core-values-layout {
+  display: grid;
+  grid-template-columns: 1.15fr 2fr; /* slightly tighter */
+  gap: 2.2rem;
+  align-items: stretch;
+}
+
+/* ============================= */
+/* FEATURED CARD */
+/* ============================= */
+.core-value-featured {
+  background: var(--white);
+  border-radius: 14px;
+  padding: 2.4rem; /* reduced */
+  border-left: 4px solid var(--grey);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.1);
+
+  display: flex;
+  gap: 1.6rem;
+  align-items: flex-start;
+}
+
+.featured-icon {
+  font-size: 3rem; /* smaller */
+  color: var(--dark-blue);
+  flex-shrink: 0;
+}
+
+/* ============================= */
+/* GRID (OTHER VALUES) */
+/* ============================= */
+.core-values-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.6rem; /* tighter */
+}
+
+/* ============================= */
+/* STANDARD CARD */
+/* ============================= */
+.core-value-card {
+  background: var(--white);
+  padding: 1.6rem; /* smaller */
+  border-radius: 12px;
+  border-top: 3px solid var(--grey);
+  box-shadow: 0 5px 14px rgba(0,0,0,0.08);
+
+  display: flex;
+  gap: 1.1rem;
+  align-items: flex-start;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.core-value-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.14);
+}
+
+/* ============================= */
+/* ICONS */
+/* ============================= */
+.core-value-icon {
+  font-size: 1.7rem; /* smaller */
+  color: var(--dark-blue);
+  flex-shrink: 0;
+}
+
+/* ============================= */
+/* TEXT */
+/* ============================= */
+.core-value-content h3 {
+  color: var(--dark-blue);
+  font-size: 1.02rem; /* smaller */
+  margin-bottom: 0.45rem;
+  font-weight: 600;
+}
+
+.core-value-content p {
+  color: var(--text-light);
+  font-size: 0.88rem; /* smaller */
+  line-height: 1.5;
+}
+
+/* FEATURED TEXT SCALE */
+.core-value-featured h3 {
+  font-size: 1.3rem; /* smaller */
+}
+
+.core-value-featured p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* ============================= */
+/* RESPONSIVE */
+/* ============================= */
+@media (max-width: 900px) {
+  .core-values-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .core-values-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .core-value-featured {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .core-values-section {
+    padding: 3.5rem 0;
+  }
+
+  .core-value-featured,
+  .core-value-card {
+    padding: 1.5rem;
+  }
+
+  .core-value-icon,
+  .featured-icon {
+    font-size: 1.6rem;
+  }
+}

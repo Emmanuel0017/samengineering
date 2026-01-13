@@ -1,6 +1,4 @@
-/* Contact.css  */
-
-.contact-page .page-hero {
+.contact-page .cntc-page-hero {
   position: relative;
   height: 60vh;
   min-height: 400px;
@@ -10,14 +8,13 @@
   text-align: center;
 }
 
-.hero-background {
+.cntc-hero-background {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  /* UPDATED: Changed blue gradient to match logo colors */
-  background: linear-gradient(135deg, rgba(0, 0, 0, 0.85) 0%, rgba(50, 50, 50, 0.85) 100%),
+  background: linear-gradient(135deg, rgba(30, 58, 138, 0.85) 0%, rgba(30, 58, 138, 0.7) 100%),
               url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
   background-size: cover;
   background-position: center;
@@ -25,32 +22,31 @@
   background-attachment: fixed;
 }
 
-.hero-overlay {
+.cntc-hero-overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  /* UPDATED: Changed to use logo light color */
   background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23bababa' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
-.hero-content {
+.cntc-hero-content {
   position: relative;
   z-index: 2;
   max-width: 800px;
   margin: 0 auto;
 }
 
-.contact-page .page-hero h1 {
-  color: #ffffff; /* White for better contrast */
+.contact-page .cntc-page-hero h1 {
+  color: var(--white); 
   margin-bottom: 1rem;
   font-size: 3.5rem;
   font-weight: 700;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.contact-page .page-hero p {
+.contact-page .cntc-page-hero p {
   color: var(--grey); /* Logo light color */
   font-size: 1.5rem;
   margin: 0;
@@ -65,7 +61,7 @@
 }
 
 .contact-info h2 {
-  color: #000000; /* Logo dark color */
+  color: var(--dark-blue); /* Logo dark color */
   margin-bottom: 1.5rem;
   font-size: 2.2rem;
   position: relative;
@@ -79,22 +75,22 @@
   left: 0;
   width: 60px;
   height: 4px;
-  background-color: var(--grey); /* Logo light color instead of orange */
+  background-color: var(--grey); 
   border-radius: 2px;
 }
 
 .contact-info > p {
   font-size: 1.1rem;
   line-height: 1.7;
-  color: #666666; /* Dark gray for text */
+  color: var(--text-light); 
   margin-bottom: 2.5rem;
 }
 
 .contact-details {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  margin-bottom: 2.5rem;
+  gap: 1rem;
+  margin-bottom: 1rem;
 }
 
 .contact-item {
@@ -102,7 +98,7 @@
   align-items: flex-start;
   gap: 1.5rem;
   padding: 1.5rem;
-  background: #f5f5f5;
+  background: var(--background-light);
   border-radius: 10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -115,8 +111,8 @@
 .contact-icon {
   font-size: 1.8rem;
   flex-shrink: 0;
-  color: #bababa; 
-  background: #ffffff;
+  color: var(--grey); 
+  background: var(--white);
   width: 60px;
   height: 60px;
   border-radius: 50%;
@@ -127,25 +123,25 @@
 }
 
 .contact-text h4 {
-  color: #000000; /* Logo dark color */
+  color: var(--dark-blue); /* Logo dark color */
   margin-bottom: 0.5rem;
   font-size: 1.2rem;
 }
 
 .contact-text p {
-  color: #666666; /* Dark gray for text */
+  color: var(--text-light); /* Dark gray for text */
   margin: 0;
   line-height: 1.5;
 }
 
 .social-contact {
-  background: #f5f5f5; /* Light gray background */
+  background: var(--background-light); /* Light gray background */
   padding: 2rem;
   border-radius: 10px;
 }
 
 .social-contact h4 {
-  color: #000000; /* Logo dark color */
+  color: var(--dark-blue); /* Logo dark color */
   margin-bottom: 1rem;
   font-size: 1.2rem;
 }
@@ -156,10 +152,10 @@
 }
 
 .social-link {
-  color: #000000; /* Logo dark color */
+  color: var(--dark-blue); /* Logo dark color */
   text-decoration: none;
   transition: all 0.3s ease;
-  background: #ffffff;
+  background: var(--white);
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -170,21 +166,21 @@
 }
 
 .social-link:hover {
-  color: #ffffff;
-  background: #000000; /* Logo dark color on hover */
-  border-color: #000000;
+  color: var(--white);
+  background: var(--dark-blue); /* Logo dark color on hover */
+  border-color: var(--dark-blue);
   transform: translateY(-3px);
 }
 
 .contact-form-container {
-  background: #f5f5f5; /* Light gray background */
+  background: var(--background-light); /* Light gray background */
   padding: 2.5rem;
   border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .contact-form h3 {
-  color: #000000; /* Logo dark color */
+  color: var(--dark-blue); /* Logo dark color */
   margin-bottom: 2rem;
   text-align: center;
   font-size: 1.8rem;
@@ -217,7 +213,7 @@
 .form-group label {
   display: block;
   margin-bottom: 0.5rem;
-  color: #000000; /* Logo dark color */
+  color: var(--dark-blue); /* Logo dark color */
   font-weight: 600;
   font-size: 0.95rem;
 }
@@ -232,14 +228,14 @@
   font-family: 'Open Sans', sans-serif;
   font-size: 1rem;
   transition: all 0.3s ease;
-  background: #ffffff;
+  background: var(--white);
 }
 
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: #000000; /* Logo dark color */
+  border-color: var(--dark-blue); /* Logo dark color */
   box-shadow: 0 0 0 3px rgba(186, 186, 186, 0.2); /* Light version of logo color */
 }
 
@@ -260,19 +256,19 @@
 }
 
 .btn-primary {
-  background-color: #000000; /* Logo dark color */
-  color: var(--grey); /* Logo light color */
+  background-color: var(--orange); /* Logo dark color */
+  color: var(--white); /* Logo light color */
 }
 
 .btn-primary:hover {
-  background-color: #333333; /* Darker gray */
-  color: #ffffff; /* White on hover */
+  background-color: var(--text-dark); /* Darker gray */
+  color: var(--white); /* White on hover */
   transform: translateY(-2px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
 .map-section {
-  background-color: #f5f5f5; /* Light gray background */
+  background-color: var(--background-light); /* Light gray background */
   padding: 5rem 0;
   margin-top: 4rem;
 }
@@ -280,7 +276,7 @@
 .cntc-section-title {
   text-align: center;
   margin-bottom: 3rem;
-  color: #000000; /* Logo dark color */
+  color: var(--dark-blue); /* Logo dark color */
   font-size: 2.2rem;
   position: relative;
   padding-bottom: 0.5rem;
@@ -307,7 +303,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #ffffff;
+  color: var(--white);
   overflow: hidden;
   position: relative;
 }
@@ -328,7 +324,7 @@
 }
 
 .map-content h3 {
-  color: #ffffff;
+  color: var(--white);
   margin-bottom: 0.5rem;
   font-size: 1.8rem;
 }
@@ -340,8 +336,8 @@
 }
 
 .emergency-section {
-  background: linear-gradient(135deg, #000000 0%, #333333 100%);
-  color: #ffffff;
+  background: linear-gradient(135deg, var(--dark-blue) 0%, var(--text-dark) 100%);
+  color: var(--white);
   padding: 4rem 0;
   margin-top: 4rem;
 }
@@ -369,7 +365,7 @@
 }
 
 .emergency-text h3 {
-  color: #ffffff;
+  color: var(--white);
   margin-bottom: 0.5rem;
   font-size: 1.8rem;
 }
@@ -388,26 +384,26 @@
   font-size: 1.8rem;
   font-weight: 700;
   margin-bottom: 1rem;
-  color: #ffffff;
+  color: var(--white);
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .contact-page .page-hero {
+  .contact-page .cntc-page-hero {
     height: 50vh;
     min-height: 350px;
   }
   
-  .hero-background {
+  .cntc-hero-background {
     background-attachment: scroll;
   }
   
-  .contact-page .page-hero h1 {
+  .contact-page .cntc-page-hero h1 {
     font-size: 2.5rem;
   }
   
-  .contact-page .page-hero p {
+  .contact-page .cntc-page-hero p {
     font-size: 1.2rem;
   }
   

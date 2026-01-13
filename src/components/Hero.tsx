@@ -11,13 +11,11 @@ const Hero: React.FC = () => {
       <div className="container">
         <div className="hero-content">
           <div className="hero-text">
-            <h1 className="hero-title">
-              SMART ACCURATE AND MODERN <span className="highlight">ELECTROMECHANICAL</span> ENGINEERING
+            <h1 className="hero-title"> 
+              SMART ACCURATE AND MODERN <span className="highlight">ELECTROMECHANICAL ENGINEERING</span> 
             </h1>
             <p className="hero-description">
-              Leading electromechanical contracting solutions for industrial, commercial, 
-              and residential projects. Innovative, reliable, and efficient systems 
-              tailored to your needs.
+              We believe engineering should empower people, strengthen industries, and power Malawi's future.
             </p>
             <div className="hero-actions">
               <Link to="/contact" className="btn btn-primary hero-cta">

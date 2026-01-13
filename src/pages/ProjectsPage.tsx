@@ -155,11 +155,11 @@ const ProjectsPage: React.FC = () => {
 
   return (
     <div className="projects-page">
-      <section className="page-hero">
-        <div className="hero-background"></div>
-        <div className="hero-overlay"></div>
+      <section className="project-page-hero">
+        <div className="project-hero-background"></div>
+        <div className="project-hero-overlay"></div>
         <div className="container">
-          <div className="hero-content">
+          <div className="project-hero-content">
             <h1>Our Projects</h1>
             <p>Explore our portfolio of successful electromechanical projects across Malawi</p>
           </div>

@@ -1,4 +1,4 @@
-.projects-page .page-hero {
+.projects-page .project-page-hero {
   position: relative;
   height: 60vh;
   min-height: 400px;
@@ -8,13 +8,13 @@
   text-align: center;
 }
 
-.hero-background {
+.project-hero-background {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, rgba(26, 52, 89, 0.85) 0%, rgba(42, 74, 124, 0.85) 100%),
+  background: linear-gradient(135deg, rgba(30, 58, 138, 0.85) 0%, rgba(30, 58, 138, 0.7) 100%),
               url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
   background-size: cover;
   background-position: center;
@@ -30,7 +30,7 @@
    - Industrial project: https://images.unsplash.com/photo-1581094794329-c8112a89af12
 */
 
-.hero-overlay {
+.project-hero-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -39,14 +39,14 @@
   background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
-.hero-content {
+.project-hero-content {
   position: relative;
   z-index: 2;
   max-width: 800px;
   margin: 0 auto;
 }
 
-.projects-page .page-hero h1 {
+.projects-page .project-page-hero h1 {
   color: var(--white);
   margin-bottom: 1rem;
   font-size: 3.5rem;
@@ -54,7 +54,7 @@
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.projects-page .page-hero p {
+.projects-page .project-page-hero p {
   color: var(--neutral-medium);
   font-size: 1.5rem;
   margin: 0;
@@ -337,20 +337,20 @@
 }
 
 @media (max-width: 768px) {
-  .projects-page .page-hero {
+  .projects-page .project-page-hero {
     height: 50vh;
     min-height: 350px;
   }
   
-  .hero-background {
+  .project-hero-background {
     background-attachment: scroll; /* Disable fixed background on mobile for performance */
   }
   
-  .projects-page .page-hero h1 {
+  .projects-page .project-page-hero h1 {
     font-size: 2.5rem;
   }
   
-  .projects-page .page-hero p {
+  .projects-page .project-page-hero p {
     font-size: 1.2rem;
   }
   
@@ -378,16 +378,16 @@
 }
 
 @media (max-width: 480px) {
-  .projects-page .page-hero {
+  .projects-page .project-page-hero {
     height: 40vh;
     min-height: 300px;
   }
   
-  .projects-page .page-hero h1 {
+  .projects-page .project-page-hero h1 {
     font-size: 2rem;
   }
   
-  .projects-page .page-hero p {
+  .projects-page .project-page-hero p {
     font-size: 1.1rem;
   }
   

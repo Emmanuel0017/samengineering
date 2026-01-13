@@ -3,17 +3,17 @@ import Hero from '../components/Hero';
 import Services from '../components/Services';
 import Projects from '../components/Projects';
 import AboutSnippet from '../components/AboutSnippet';
-import Testimonials from '../components/Testimonials';
 import ContactCTA from '../components/ContactCTA';
+import CoreValues from '../components/CoreValues';
 
 const Home: React.FC = () => {
   return (
     <div className="home">
       <Hero />
+      <CoreValues />
       <Services />
       <Projects />
       <AboutSnippet />
-      <Testimonials />
       <ContactCTA />
     </div>
   );

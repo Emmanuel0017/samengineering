@@ -2,10 +2,6 @@ import React from 'react';
 import './About.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-  faLightbulb,
-  faShieldAlt,
-  faStar,
-  faHandshake,
   faUserTie,
   faUserTie as faUserTieFemale,
   faBullseye,
@@ -15,11 +11,11 @@ import {
 const About: React.FC = () => {
   return (
     <div className="about-page">
-      <section className="page-hero">
-        <div className="hero-background"></div>
-        <div className="hero-overlay"></div>
+      <section className="abt-page-hero">
+        <div className="abt-hero-background"></div>
+        <div className="abt-hero-overlay"></div>
         <div className="container">
-          <div className="hero-content">
+          <div className="abt-hero-content">
             <h1>About S.A.M Engineering</h1>
             <p>Leading electromechanical solutions</p>
           </div>
@@ -69,42 +65,7 @@ const About: React.FC = () => {
           </div>
         </div>
       </section>
-
-      <section className="section values-section">
-        <div className="container">
-          <h2 className="about-section-title">Our Values</h2>
-          <div className="values-grid">
-            <div className="value-card">
-              <span className="value-icon">
-                <FontAwesomeIcon icon={faLightbulb} />
-              </span>
-              <h3>Innovation</h3>
-              <p>Embracing new technologies and methodologies to deliver cutting-edge solutions.</p>
-            </div>
-            <div className="value-card">
-              <span className="value-icon">
-                <FontAwesomeIcon icon={faShieldAlt} />
-              </span>
-              <h3>Safety</h3>
-              <p>Prioritizing the well-being of our team, clients, and community in all operations.</p>
-            </div>
-            <div className="value-card">
-              <span className="value-icon">
-                <FontAwesomeIcon icon={faStar} />
-              </span>
-              <h3>Quality</h3>
-              <p>Delivering exceptional workmanship that exceeds industry standards.</p>
-            </div>
-            <div className="value-card">
-              <span className="value-icon">
-                <FontAwesomeIcon icon={faHandshake} />
-              </span>
-              <h3>Integrity</h3>
-              <p>Building trust through transparent communication and ethical practices.</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      
 
       <section className="section team-section">
         <div className="container">

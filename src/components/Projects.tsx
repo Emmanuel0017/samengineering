@@ -115,7 +115,7 @@ const Projects: React.FC = () => {
         </div>
 
         <div className="projects-grid">
-          {filteredProjects.slice(0, 6).map(project => (
+          {filteredProjects.slice(0, 3).map(project => (
             <div key={project.id} className="project-card">
               <div className="project-image-container">
                 <img 

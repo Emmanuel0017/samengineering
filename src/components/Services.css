@@ -4,8 +4,8 @@
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
   margin-bottom: 3rem;
 }
 
@@ -28,11 +28,11 @@
   font-size: 3rem;
   margin-bottom: 1.5rem;
   display: block;
-  color: var(--dark-blue); /* Add this line */
+  color: var(--dark-blue); 
 }
 
 .service-icon svg {
-  width: 1em !important; /* Ensure consistent sizing */
+  width: 1em !important; 
   height: 1em !important;
 }
 

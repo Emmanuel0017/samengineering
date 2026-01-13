@@ -70,7 +70,7 @@ const Services: React.FC = () => {
         </div>
         
         <div className="services-grid">
-          {services.map(service => (
+          {services.slice(0, 4).map(service => (
             <div key={service.id} className="service-card">
               <div className="service-icon">
                 <FontAwesomeIcon 

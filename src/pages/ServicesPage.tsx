@@ -148,11 +148,11 @@ const ServicesPage: React.FC = () => {
 
   return (
     <div className="services-page">
-      <section className="page-hero">
-        <div className="hero-background"></div>
-        <div className="hero-overlay"></div>
+      <section className="services-page-hero">
+        <div className="services-hero-background"></div>
+        <div className="services-hero-overlay"></div>
         <div className="container">
-          <div className="hero-content">
+          <div className="services-hero-content">
             <h1>Our Services</h1>
             <p>Comprehensive electromechanical solutions tailored to your needs</p>
           </div>

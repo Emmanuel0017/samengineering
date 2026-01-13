@@ -67,7 +67,7 @@ const About: React.FC = () => {
       </section>
       
 
-      <section className="section team-section">
+      {/* <section className="section team-section">
         <div className="container">
           <h2 className="about-section-title">Leadership Team</h2>
           <div className="team-grid">
@@ -97,12 +97,12 @@ const About: React.FC = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
-      <section className="section certifications-section">
+      {/* <section className="section certifications-section">
         <div className="container">
           <h2 className="about-section-title">Certifications</h2>
-          {/* <div className="certifications-grid">
+          className="certifications-grid">
             <div className="certification">
               <span className="cert-icon">
                 <FontAwesomeIcon icon={faTrophy} />
@@ -131,9 +131,9 @@ const About: React.FC = () => {
               <h3>Green Building</h3>
               <p>LEED Accredited Professionals</p>
             </div>
-          </div> */}
+          </div> 
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };

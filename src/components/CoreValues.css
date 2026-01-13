@@ -1,16 +1,21 @@
+/* =============================
+   SECTION
+   ============================= */
 .core-values-section {
   background-color: var(--background-light);
-  padding: 4rem; 
+  padding: 4rem 1.5rem;
 }
 
-/* TITLE */
+/* =============================
+   TITLE
+   ============================= */
 .core-values-title {
   text-align: center;
   margin-bottom: 3rem;
   color: var(--dark-blue);
-  font-size: 2rem; /* smaller */
+  font-size: 2rem;
   position: relative;
-  padding-bottom: 1.2rem;
+  padding-bottom: 1rem;
 }
 
 .core-values-title::after {
@@ -25,131 +30,171 @@
   border-radius: 2px;
 }
 
-/* ============================= */
-/* LAYOUT */
-/* ============================= */
+/* =============================
+   LAYOUT (DESKTOP)
+   ============================= */
 .core-values-layout {
+  max-width: 1200px;
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: 1.15fr 2fr; /* slightly tighter */
+  grid-template-columns: 1.2fr 2fr;
   gap: 2.2rem;
   align-items: stretch;
 }
 
-/* ============================= */
-/* FEATURED CARD */
-/* ============================= */
+/* =============================
+   FEATURED CARD
+   ============================= */
 .core-value-featured {
   background: var(--white);
   border-radius: 14px;
-  padding: 2.4rem; /* reduced */
+  padding: 2.4rem;
   border-left: 4px solid var(--grey);
-  box-shadow: 0 8px 22px rgba(0,0,0,0.1);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.1);
 
   display: flex;
-  gap: 1.6rem;
+  gap: 1.5rem;
   align-items: flex-start;
 }
 
 .featured-icon {
-  font-size: 3rem; /* smaller */
+  font-size: 3rem;
   color: var(--dark-blue);
   flex-shrink: 0;
 }
 
-/* ============================= */
-/* GRID (OTHER VALUES) */
-/* ============================= */
+/* =============================
+   GRID (OTHER VALUES)
+   ============================= */
 .core-values-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1.6rem; /* tighter */
+  gap: 1.6rem;
 }
 
-/* ============================= */
-/* STANDARD CARD */
-/* ============================= */
+/* =============================
+   STANDARD CARD
+   ============================= */
 .core-value-card {
   background: var(--white);
-  padding: 1.6rem; /* smaller */
+  padding: 1.6rem;
   border-radius: 12px;
   border-top: 3px solid var(--grey);
-  box-shadow: 0 5px 14px rgba(0,0,0,0.08);
+  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.08);
 
   display: flex;
-  gap: 1.1rem;
+  gap: 1rem;
   align-items: flex-start;
+
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .core-value-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 24px rgba(0,0,0,0.14);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.14);
 }
 
-/* ============================= */
-/* ICONS */
-/* ============================= */
+/* =============================
+   ICONS
+   ============================= */
 .core-value-icon {
-  font-size: 1.7rem; /* smaller */
+  font-size: 1.7rem;
   color: var(--dark-blue);
   flex-shrink: 0;
 }
 
-/* ============================= */
-/* TEXT */
-/* ============================= */
+/* =============================
+   TEXT
+   ============================= */
 .core-value-content h3 {
   color: var(--dark-blue);
-  font-size: 1.02rem; /* smaller */
+  font-size: 1.05rem;
   margin-bottom: 0.45rem;
   font-weight: 600;
 }
 
 .core-value-content p {
   color: var(--text-light);
-  font-size: 0.88rem; /* smaller */
-  line-height: 1.5;
+  font-size: 0.9rem;
+  line-height: 1.55;
 }
 
 /* FEATURED TEXT SCALE */
 .core-value-featured h3 {
-  font-size: 1.3rem; /* smaller */
+  font-size: 1.35rem;
 }
 
 .core-value-featured p {
-  font-size: 0.95rem;
+  font-size: 0.98rem;
   line-height: 1.6;
 }
 
-/* ============================= */
-/* RESPONSIVE */
-/* ============================= */
+/* =============================
+   TABLET (≤ 900px)
+   ============================= */
 @media (max-width: 900px) {
   .core-values-layout {
     grid-template-columns: 1fr;
   }
 
   .core-values-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 
   .core-value-featured {
-    flex-direction: column;
+    flex-direction: row;
   }
 }
 
-@media (max-width: 480px) {
+/* =============================
+   MOBILE (≤ 600px)
+   ============================= */
+@media (max-width: 600px) {
   .core-values-section {
-    padding: 3.5rem 0;
+    padding: 3rem 1rem;
+  }
+
+  /* REMOVE dominance on mobile */
+  .core-values-layout {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .core-values-grid {
+    grid-template-columns: 1fr;
   }
 
   .core-value-featured,
   .core-value-card {
-    padding: 1.5rem;
+    padding: 1.4rem;
   }
 
-  .core-value-icon,
-  .featured-icon {
+  .core-value-featured {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .featured-icon,
+  .core-value-icon {
+    font-size: 1.6rem;
+  }
+
+  .core-value-featured h3,
+  .core-value-content h3 {
+    font-size: 1.05rem;
+  }
+
+  .core-value-featured p,
+  .core-value-content p {
+    font-size: 0.88rem;
+  }
+}
+
+/* =============================
+   SMALL MOBILE (≤ 400px)
+   ============================= */
+@media (max-width: 400px) {
+  .core-values-title {
     font-size: 1.6rem;
   }
 }

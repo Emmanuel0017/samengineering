@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-// import Chatbot from "./Chatbot"; 
+// import Chatbot from "./Chatbot";   2`  sv nvcx   
 import FloatingChatbotButton from "./FloatingChatbotButton";
 import FloatingWhatsApp from "./FloatingWhatsApp";
 import "./ChatbotWidget.css";

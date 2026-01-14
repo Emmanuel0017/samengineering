@@ -1,15 +1,16 @@
 import type { VercelRequest, VercelResponse } from "@vercel/node";
-import OpenAI from "openai";
-import fs from "fs";
-import path from "path";
 
-const client = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
-});
+const fs = require("fs");
+const path = require("path");
+const OpenAI = require("openai").default;
 
-export default async function handler(
-  req: VercelRequest,
-  res: VercelResponse
+/**
+ * @param {import("@vercel/node").VercelRequest} req
+ * @param {import("@vercel/node").VercelResponse} res
+ */
+module.exports = async function handler(
+    req: VercelRequest,
+    res: VercelResponse
 ) {
   try {
     if (req.method !== "POST") {
@@ -17,10 +18,10 @@ export default async function handler(
     }
 
     if (!process.env.OPENAI_API_KEY) {
-      throw new Error("OPENAI_API_KEY is missing");
+      throw new Error("OPENAI_API_KEY missing");
     }
 
-    const { message } = req.body as { message?: string };
+    const { message } = req.body || {};
 
     if (!message || message.length > 300) {
       return res.json({
@@ -40,12 +41,19 @@ export default async function handler(
 
     const knowledge = fs.readFileSync(knowledgePath, "utf8");
 
+    const client = new OpenAI({
+      apiKey: process.env.OPENAI_API_KEY,
+    });
+
     const completion = await client.chat.completions.create({
       model: "gpt-4o-mini",
       messages: [
         {
           role: "system",
-          content: `You are a professional assistant for S.A.M Engineering. Only answer using the information below. If the question is outside this information, direct the user to contact the company.
+          content: `
+You are a professional assistant for S.A.M Engineering.
+Only answer using the information below.
+If the question is outside this information, direct the user to contact the company.
 
 ${knowledge}
           `,
@@ -55,12 +63,10 @@ ${knowledge}
     });
 
     return res.status(200).json({
-      reply: completion.choices[0].message.content ?? "",
+      reply: completion.choices[0].message.content || "",
     });
   } catch (err) {
     console.error("Chat API error:", err);
-    return res.status(500).json({
-      error: "Internal server error",
-    });
+    return res.status(500).json({ error: "Internal server error" });
   }
-}
+};

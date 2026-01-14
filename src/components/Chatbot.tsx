@@ -1,11 +1,11 @@
-import { useState } from "react";
+import { JSX, useState } from "react";
 import "./Chatbot.css";
 
 type Sender = "user" | "bot";
 
 interface Message {
   from: Sender;
-  text: string;
+  text: string | JSX.Element;
 }
 
 export default function Chatbot() {
@@ -46,7 +46,16 @@ export default function Chatbot() {
         ...prev,
         {
           from: "bot",
-          text: "Something went wrong. Please contact us directly.",
+          text: (
+            <>
+              Sorry i cannot help you at the moment. Please{" "}
+              <a href="/contact" style={{ color: "#007bff", textDecoration: "underline" }}>
+                contact us
+              </a>
+              {" "}
+              directly.
+            </>
+          ),
         },
       ]);
     } finally {
@@ -59,7 +68,7 @@ export default function Chatbot() {
       <div className="messages">
         {messages.map((m, i) => (
           <div key={i} className={`message ${m.from}`}>
-            {m.text}
+            {typeof m.text === "string" ? m.text : m.text}
           </div>
         ))}
         {loading && <div className="message bot">Typing...</div>}

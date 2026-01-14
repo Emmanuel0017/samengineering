@@ -11,7 +11,7 @@ const ChatbotWidget: React.FC = () => {
     <>
       <FloatingWhatsApp />
 
-      <FloatingChatbotButton onClick={() => setOpen(!open)} />
+      {/* <FloatingChatbotButton onClick={() => setOpen(!open)} /> */}
 
       {/* {open && (
         <div className="chatbot-widget">

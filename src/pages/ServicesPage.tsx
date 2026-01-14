@@ -10,12 +10,16 @@ import {
   faPlug,
   faIndustry,
   faCheck,
-  faArrowRight
+  faArrowRight,
+  faSolarPanel,
+  faVideo,
+  faHome,
+  faCogs
 } from '@fortawesome/free-solid-svg-icons';
 
 interface ServiceDetail {
   id: number;
-  icon: any; // IconDefinition type
+  icon: any; 
   title: string;
   description: string;
   features: string[];
@@ -24,127 +28,179 @@ interface ServiceDetail {
 
 const ServicesPage: React.FC = () => {
   const services: ServiceDetail[] = [
-    {
-      id: 1,
-      icon: faBolt,
-      title: 'Electrical Systems',
-      description: 'Comprehensive electrical solutions for industrial, commercial, and residential applications.',
-      features: [
-        'Power distribution design',
-        'Lighting systems installation',
-        'Emergency power systems',
-        'Energy management',
-        'Electrical safety audits'
-      ],
-      applications: [
-        'Manufacturing facilities',
-        'Office buildings',
-        'Healthcare facilities',
-        'Educational institutions',
-        'Retail spaces'
-      ]
-    },
-    {
-      id: 2,
-      icon: faTools,
-      title: 'Mechanical Installation',
-      description: 'Professional mechanical systems installation and commissioning services.',
-      features: [
-        'Piping systems',
-        'Equipment installation',
-        'Ventilation systems',
-        'Pump and compressor setup',
-        'System testing'
-      ],
-      applications: [
-        'Industrial plants',
-        'HVAC systems',
-        'Process piping',
-        'Mechanical equipment',
-        'Utility systems'
-      ]
-    },
-    {
-      id: 3,
-      icon: faSnowflake,
-      title: 'HVAC Solutions',
-      description: 'Heating, ventilation, and air conditioning systems for optimal environmental control.',
-      features: [
-        'System design and calculation',
-        'Ductwork installation',
-        'Chiller and boiler systems',
-        'Energy recovery',
-        'Building automation integration'
-      ],
-      applications: [
-        'Commercial buildings',
-        'Industrial facilities',
-        'Data centers',
-        'Healthcare facilities',
-        'Residential complexes'
-      ]
-    },
-    {
-      id: 4,
-      icon: faWrench,
-      title: 'Maintenance Services',
-      description: 'Preventive and corrective maintenance programs to ensure system reliability.',
-      features: [
-        'Scheduled maintenance',
-        '24/7 emergency response',
-        'Predictive maintenance',
-        'System optimization',
-        'Performance monitoring'
-      ],
-      applications: [
-        'Equipment maintenance',
-        'System upgrades',
-        'Troubleshooting',
-        'Performance optimization',
-        'Lifecycle management'
-      ]
-    },
-    {
-      id: 5,
-      icon: faPlug,
-      title: 'Power Distribution',
-      description: 'Efficient power distribution systems design and implementation.',
-      features: [
-        'Transformer installation',
-        'Switchgear setup',
-        'Power quality analysis',
-        'Grounding systems',
-        'Protection coordination'
-      ],
-      applications: [
-        'Electrical substations',
-        'Power plants',
-        'Industrial complexes',
-        'Commercial centers',
-        'Renewable energy integration'
-      ]
-    },
-    {
-      id: 6,
-      icon: faIndustry,
-      title: 'Industrial Automation',
-      description: 'Advanced automation solutions for improved efficiency and productivity.',
-      features: [
-        'PLC programming',
-        'SCADA systems',
-        'Process control',
-        'Robotics integration',
-        'Data acquisition'
-      ],
-      applications: [
-        'Manufacturing lines',
-        'Process industries',
-        'Material handling',
-        'Quality control',
-        'Production monitoring'
-      ]
-    }
-  ];
+  {
+    id: 1,
+    icon: faBolt,
+    title: 'Transmission Powerline Construction & Maintenance',
+    description: 'Construction and maintenance of high-voltage power lines that transmit electricity over long distances.',
+    features: [
+      'High-voltage line construction',
+      'Tower and pole installation',
+      'Line inspection and repairs',
+      'Fault response and restoration',
+      'Safety compliance and testing'
+    ],
+    applications: [
+      'National power grids',
+      'Power stations',
+      'Long-distance electricity transmission',
+      'Utility infrastructure projects'
+    ]
+  },
+  {
+    id: 2,
+    icon: faPlug,
+    title: 'Distribution Powerline Construction & Maintenance',
+    description: 'Installation and servicing of power lines that distribute electricity to homes, businesses, and communities.',
+    features: [
+      'Medium and low voltage lines',
+      'Pole-mounted equipment installation',
+      'Network upgrades and extensions',
+      'Fault detection and repairs',
+      'Routine maintenance'
+    ],
+    applications: [
+      'Residential areas',
+      'Commercial districts',
+      'Industrial zones',
+      'Urban and rural electrification'
+    ]
+  },
+  {
+    id: 3,
+    icon: faTools,
+    title: 'Building Electrical Services',
+    description: 'Complete electrical installations for safe and reliable power within buildings.',
+    features: [
+      'Electrical wiring and fittings',
+      'Lighting and power outlets',
+      'Backup power connections',
+      'System testing and commissioning',
+      'Safety inspections'
+    ],
+    applications: [
+      'Homes and apartments',
+      'Office buildings',
+      'Schools and hospitals',
+      'Retail and commercial spaces'
+    ]
+  },
+  {
+    id: 4,
+    icon: faSnowflake,
+    title: 'Air Conditioning Installation & Maintenance',
+    description: 'Installation and maintenance of air conditioning systems for comfortable indoor environments.',
+    features: [
+      'AC system installation',
+      'Routine servicing and cleaning',
+      'Fault diagnosis and repairs',
+      'Energy-efficient solutions',
+      'System performance checks'
+    ],
+    applications: [
+      'Office buildings',
+      'Residential properties',
+      'Commercial spaces',
+      'Industrial and technical rooms'
+    ]
+  },
+  {
+    id: 5,
+    icon: faSolarPanel,
+    title: 'Renewable Energy Installation & Maintenance',
+    description: 'Clean and sustainable energy solutions designed to reduce power costs and improve reliability.',
+    features: [
+      'Solar power system installation',
+      'Battery and inverter setup',
+      'System monitoring',
+      'Preventive maintenance',
+      'Energy efficiency improvements'
+    ],
+    applications: [
+      'Homes and businesses',
+      'Farms and remote sites',
+      'Backup power systems',
+      'Off-grid and hybrid solutions'
+    ]
+  },
+  {
+    id: 6,
+    icon: faIndustry,
+    title: 'Industrial Electro-Mechanical Installations & Maintenance',
+    description: 'Installation and maintenance of electrical and mechanical systems used in industrial operations.',
+    features: [
+      'Equipment installation',
+      'Electrical and mechanical integration',
+      'Preventive maintenance',
+      'Fault troubleshooting',
+      'System reliability improvement'
+    ],
+    applications: [
+      'Factories',
+      'Processing plants',
+      'Workshops',
+      'Industrial facilities'
+    ]
+  },
+  {
+    id: 7,
+    icon: faVideo,
+    title: 'CCTV & Intercom Systems',
+    description: 'Security and communication systems that help monitor premises and control access.',
+    features: [
+      'CCTV camera installation',
+      'Intercom and access control systems',
+      'System configuration',
+      'Maintenance and support',
+      'Remote monitoring setup'
+    ],
+    applications: [
+      'Homes and estates',
+      'Office buildings',
+      'Commercial properties',
+      'Industrial sites'
+    ]
+  },
+  {
+    id: 8,
+    icon: faHome,
+    title: 'House Automation Solutions',
+    description: 'Smart home solutions that provide convenient control of lighting, security, and appliances.',
+    features: [
+      'Smart lighting control',
+      'Security system integration',
+      'Remote access via mobile devices',
+      'Energy usage control',
+      'System customization'
+    ],
+    applications: [
+      'Modern homes',
+      'Luxury residences',
+      'Apartments',
+      'Smart offices'
+    ]
+  },
+  {
+    id: 9,
+    icon: faCogs,
+    title: 'Production Plant Installation, Maintenance & Optimization',
+    description: 'Installation and improvement of production facilities to ensure efficient and reliable operations.',
+    features: [
+      'Production equipment installation',
+      'Routine and corrective maintenance',
+      'System performance optimization',
+      'Downtime reduction',
+      'Operational efficiency improvements'
+    ],
+    applications: [
+      'Manufacturing plants',
+      'Processing facilities',
+      'Industrial production lines',
+      'Factory upgrades'
+    ]
+  }
+];
+
 
   return (
     <div className="services-page">

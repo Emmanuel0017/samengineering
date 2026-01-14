@@ -23,43 +23,31 @@ interface Service {
 
 const Services: React.FC = () => {
   const services: Service[] = [
-    {
-      id: 1,
-      icon: faBolt,
-      title: 'Electrical Systems',
-      description: 'Complete electrical installation, maintenance, and upgrade services for industrial and commercial facilities.'
-    },
-    {
-      id: 2,
-      icon: faTools,
-      title: 'Mechanical Installation',
-      description: 'Professional mechanical systems installation including piping, machinery, and equipment setup.'
-    },
-    {
-      id: 3,
-      icon: faSnowflake,
-      title: 'HVAC Solutions',
-      description: 'Heating, ventilation, and air conditioning systems design, installation, and maintenance.'
-    },
-    {
-      id: 4,
-      icon: faWrench,
-      title: 'Maintenance Services',
-      description: 'Preventive and corrective maintenance programs to ensure optimal system performance.'
-    },
-    {
-      id: 5,
-      icon: faPlug,
-      title: 'Power Distribution',
-      description: 'Design and installation of efficient power distribution systems for various applications.'
-    },
-    {
-      id: 6,
-      icon: faIndustry,
-      title: 'Industrial Automation',
-      description: 'Automation solutions to improve efficiency and productivity in industrial processes.'
-    }
-  ];
+  {
+    id: 1,
+    icon: faBolt,
+    title: 'Power Line Construction & Maintenance',
+    description: 'Construction and maintenance of transmission and distribution power lines to ensure reliable electricity supply.'
+  },
+  {
+    id: 2,
+    icon: faPlug,
+    title: 'Building Electrical Services',
+    description: 'Complete electrical installations and upgrades for residential, commercial, and industrial buildings.'
+  },
+  {
+    id: 3,
+    icon: faSnowflake,
+    title: 'Air Conditioning Solutions',
+    description: 'Installation and maintenance of air conditioning systems for comfortable and efficient indoor environments.'
+  },
+  {
+    id: 4,
+    icon: faIndustry,
+    title: 'Industrial & Plant Services',
+    description: 'Installation, maintenance, and optimization of industrial equipment and production plants.'
+  }
+];
 
   return (
     <section className="services section">

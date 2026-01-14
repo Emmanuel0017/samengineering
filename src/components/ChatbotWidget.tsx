@@ -1,19 +1,19 @@
-// import React, { useState } from "react";
-// import Chatbot from "./Chatbot";   2`  sv nvcx   
-// import FloatingChatbotButton from "./FloatingChatbotButton";
+import React, { useState } from "react";
+import Chatbot from "./Chatbot";    
+import FloatingChatbotButton from "./FloatingChatbotButton";
 import FloatingWhatsApp from "./FloatingWhatsApp";
 import "./ChatbotWidget.css";
 
 const ChatbotWidget: React.FC = () => {
-  // const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false);
 
   return (
     <>
       <FloatingWhatsApp />
 
-      {/* <FloatingChatbotButton onClick={() => setOpen(!open)} /> */}
+      <FloatingChatbotButton onClick={() => setOpen(!open)} />
 
-      {/* {open && (
+      {open && (
         <div className="chatbot-widget">
           <div className="chatbot-header">
             <span>S.A.M Engineering Assistant</span>
@@ -21,7 +21,7 @@ const ChatbotWidget: React.FC = () => {
           </div>
           <Chatbot />
         </div>
-      )} */}
+      )}
     </>
   );
 };

@@ -1,4 +1,4 @@
-import { JSX, useState } from "react";
+import { useState } from "react";
 import "./Chatbot.css";
 
 type Sender = "user" | "bot";
@@ -8,7 +8,7 @@ interface Message {
   text: string;
 }
 
-export default function Chatbot(): JSX.Element {
+export default function Chatbot() {
   const [messages, setMessages] = useState<Message[]>([
     {
       from: "bot",
@@ -16,29 +16,30 @@ export default function Chatbot(): JSX.Element {
     },
   ]);
 
-  const [input, setInput] = useState<string>("");
-  const [loading, setLoading] = useState<boolean>(false);
+  const [input, setInput] = useState("");
+  const [loading, setLoading] = useState(false);
 
-  const sendMessage = async (): Promise<void> => {
+  const sendMessage = async () => {
     if (!input.trim()) return;
 
-    const userMessage: Message = { from: "user", text: input };
-    setMessages((prev) => [...prev, userMessage]);
+    const userText = input;
     setInput("");
     setLoading(true);
 
+    setMessages((prev) => [...prev, { from: "user", text: userText }]);
+
     try {
-      const res = await fetch("http://localhost:3000/api/chat", {
+      const res = await fetch("/api/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ message: userMessage.text }),
+        body: JSON.stringify({ message: userText }),
       });
 
-      const data: { reply: string } = await res.json();
+      const data = await res.json();
 
       setMessages((prev) => [
         ...prev,
-        { from: "bot", text: data.reply },
+        { from: "bot", text: data.reply ?? "No response" },
       ]);
     } catch {
       setMessages((prev) => [

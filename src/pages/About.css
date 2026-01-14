@@ -56,7 +56,7 @@
 .about-grid {
   display: grid;
   gap: 4rem;
-  margin-top: 4rem;
+  margin: 4rem auto;
 }
 
 .about-story h2,

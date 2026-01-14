@@ -2,8 +2,6 @@ import React from 'react';
 import './About.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-  faUserTie,
-  faUserTie as faUserTieFemale,
   faBullseye,
   faEye
 } from '@fortawesome/free-solid-svg-icons';

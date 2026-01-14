@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+// import React, { useState } from "react";
 // import Chatbot from "./Chatbot";   2`  sv nvcx   
-import FloatingChatbotButton from "./FloatingChatbotButton";
+// import FloatingChatbotButton from "./FloatingChatbotButton";
 import FloatingWhatsApp from "./FloatingWhatsApp";
 import "./ChatbotWidget.css";
 
 const ChatbotWidget: React.FC = () => {
-  const [open, setOpen] = useState(false);
+  // const [open, setOpen] = useState(false);
 
   return (
     <>

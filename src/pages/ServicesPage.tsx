@@ -6,7 +6,6 @@ import {
   faBolt,
   faTools,
   faSnowflake,
-  faWrench,
   faPlug,
   faIndustry,
   faCheck,

@@ -5,9 +5,7 @@ import './Services.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { 
   faBolt, 
-  faTools, 
   faSnowflake, 
-  faWrench, 
   faPlug, 
   faIndustry,
   faArrowRight,

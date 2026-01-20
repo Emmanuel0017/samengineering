@@ -21,14 +21,14 @@ const Projects: React.FC = () => {
       title: 'Industrial Plant Electrical Upgrade',
       category: 'electrical',
       description: 'Complete electrical system modernization for manufacturing facility with advanced power distribution and control systems.',
-      imageUrl: 'assets/1.jpeg'
+      imageUrl: 'assets/9 (11).jpg'
     },
     {
       id: 2,
       title: 'Commercial HVAC Installation',
       category: 'hvac',
       description: 'Energy-efficient HVAC system installation for modern office complex with smart climate control technology.',
-      imageUrl: 'assets/3.jpeg'
+      imageUrl: 'assets/9 (13).jpg'
     },
     {
       id: 3,
@@ -37,48 +37,48 @@ const Projects: React.FC = () => {
       description: 'Advanced automation and robotics integration for production line optimization and efficiency improvement.',
       imageUrl: 'assets/5.jpeg'
     },
-    {
-      id: 4,
-      title: 'Power Distribution Center',
-      category: 'electrical',
-      description: 'New high-capacity power distribution hub serving industrial park with redundant backup systems.',
-      imageUrl: 'assets/4.jpeg'
-    },
-    {
-      id: 5,
-      title: 'Mechanical Systems Maintenance',
-      category: 'maintenance',
-      description: 'Comprehensive preventive maintenance program for industrial machinery and mechanical equipment.',
-      imageUrl: 'assets/1.jpeg'
-    },
-    {
-      id: 6,
-      title: 'Renewable Energy Integration',
-      category: 'electrical',
-      description: 'Solar power system integration with existing electrical infrastructure for commercial building.',
-      imageUrl: 'assets/2'
-    },
-    {
-      id: 7,
-      title: 'Water Treatment Plant',
-      category: 'mechanical',
-      description: 'Complete mechanical and electrical systems for municipal water treatment facility.',
-      imageUrl: 'assets/3.jpeg'
-    },
-    {
-      id: 8,
-      title: 'Data Center Cooling',
-      category: 'hvac',
-      description: 'Specialized precision cooling system for high-density data center with redundant backup.',
-      imageUrl: 'assets/4.jpeg'
-    },
-    {
-      id: 9,
-      title: 'Manufacturing Plant Control Systems',
-      category: 'automation',
-      description: 'PLC and SCADA system implementation for automated manufacturing process control.',
-      imageUrl: 'assets/5.jpeg'
-    }
+    // {
+    //   id: 4,
+    //   title: 'Power Distribution Center',
+    //   category: 'electrical',
+    //   description: 'New high-capacity power distribution hub serving industrial park with redundant backup systems.',
+    //   imageUrl: 'assets/4.jpeg'
+    // },
+    // {
+    //   id: 5,
+    //   title: 'Mechanical Systems Maintenance',
+    //   category: 'maintenance',
+    //   description: 'Comprehensive preventive maintenance program for industrial machinery and mechanical equipment.',
+    //   imageUrl: 'assets/1.jpeg'
+    // },
+    // {
+    //   id: 6,
+    //   title: 'Renewable Energy Integration',
+    //   category: 'electrical',
+    //   description: 'Solar power system integration with existing electrical infrastructure for commercial building.',
+    //   imageUrl: 'assets/2'
+    // },
+    // {
+    //   id: 7,
+    //   title: 'Water Treatment Plant',
+    //   category: 'mechanical',
+    //   description: 'Complete mechanical and electrical systems for municipal water treatment facility.',
+    //   imageUrl: 'assets/3.jpeg'
+    // },
+    // {
+    //   id: 8,
+    //   title: 'Data Center Cooling',
+    //   category: 'hvac',
+    //   description: 'Specialized precision cooling system for high-density data center with redundant backup.',
+    //   imageUrl: 'assets/4.jpeg'
+    // },
+    // {
+    //   id: 9,
+    //   title: 'Manufacturing Plant Control Systems',
+    //   category: 'automation',
+    //   description: 'PLC and SCADA system implementation for automated manufacturing process control.',
+    //   imageUrl: 'assets/5.jpeg'
+    // }
   ];
 
   const categories = [

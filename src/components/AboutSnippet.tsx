@@ -27,8 +27,7 @@ const AboutSnippet: React.FC = () => {
           </div>
           <div className="about-image">
             <div className="image-placeholder">
-              <span></span>
-              <p>Industrial Excellence</p>
+              {/* <img src="assets/9 (7).jpg" alt="industrial excellence" /> */}
             </div>
           </div>
         </div>

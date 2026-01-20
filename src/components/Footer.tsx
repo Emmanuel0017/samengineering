@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './Footer.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faLocationPin, faPhone } from '@fortawesome/free-solid-svg-icons';
-import { faFacebook, faLinkedin, faXTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faFacebook, faInstagram, faLinkedin, faXTwitter } from '@fortawesome/free-brands-svg-icons';
 
 const Footer: React.FC = () => {
   return (
@@ -23,6 +23,7 @@ const Footer: React.FC = () => {
               <a href="/" className="social-link"><FontAwesomeIcon icon={faLinkedin} size='2x'/></a>
               <a href="/" className="social-link"><FontAwesomeIcon icon={faXTwitter} size='2x'/></a>
               <a href="/" className="social-link"><FontAwesomeIcon icon={faFacebook} size='2x'/></a>
+              <a href="/" className="social-link"><FontAwesomeIcon icon={faInstagram} size='2x'/></a>
             </div>
           </div>
 

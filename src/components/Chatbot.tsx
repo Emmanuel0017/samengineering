@@ -1,4 +1,4 @@
-import { JSX, useState } from "react";
+import { useState, JSX } from "react";
 import "./Chatbot.css";
 
 type Sender = "user" | "bot";
@@ -10,12 +10,8 @@ interface Message {
 
 export default function Chatbot() {
   const [messages, setMessages] = useState<Message[]>([
-    {
-      from: "bot",
-      text: "Hello 👋 How can S.A.M Engineering assist you today?",
-    },
+    { from: "bot", text: "Hello 👋 How can S.A.M Engineering assist you today?" },
   ]);
-
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
 
@@ -29,7 +25,7 @@ export default function Chatbot() {
     setMessages((prev) => [...prev, { from: "user", text: userText }]);
 
     try {
-      const res = await fetch("/api/chat", {
+      const res = await fetch("http://localhost:3001/api/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: userText }),
@@ -51,8 +47,7 @@ export default function Chatbot() {
               Sorry i cannot help you at the moment. Please{" "}
               <a href="/contact" style={{ color: "#007bff", textDecoration: "underline" }}>
                 contact us
-              </a>
-              {" "}
+              </a>{" "}
               directly.
             </>
           ),

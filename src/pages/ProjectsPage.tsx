@@ -24,7 +24,7 @@ const ProjectsPage: React.FC = () => {
       category: 'electrical',
       description: 'Complete electrical system modernization',
       fullDescription: 'Comprehensive electrical system upgrade for Blantyre Industrial Estate manufacturing facilities, including new power distribution, lighting systems, and emergency power solutions. The project involved replacing outdated equipment with energy-efficient systems and implementing smart control technologies.',
-      imageUrl: 'assets/1.jpeg',
+      imageUrl: 'assets/9 (37).jpg',
       completionDate: 'June 2023',
       client: 'Blantyre Industrial Holdings Ltd.',
       location: 'Blantyre Industrial Estate, Malawi',

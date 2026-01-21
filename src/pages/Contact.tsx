@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Contact.css';
 import emailjs from 'emailjs-com';
 
-import { faFacebook, faLinkedin, faXTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faFacebook, faInstagram, faLinkedin, faXTwitter } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClock, faEnvelope, faLocationPin, faPhone } from '@fortawesome/free-solid-svg-icons';
 
@@ -137,6 +137,7 @@ const Contact: React.FC = () => {
                   <a href="/" className="social-link"><FontAwesomeIcon icon={faLinkedin} size="2x" /></a>
                   <a href="/" className="social-link"><FontAwesomeIcon icon={faFacebook} size="2x" /></a>
                   <a href="/" className="social-link"><FontAwesomeIcon icon={faXTwitter} size="2x" /></a>
+                  <a href="/" className="social-link"><FontAwesomeIcon icon={faInstagram} size="2x" /></a>
                 </div>
               </div>
             </div>

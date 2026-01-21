@@ -26,7 +26,7 @@ const About: React.FC = () => {
             <div className="about-story">
               <h2>Our Story</h2>
               <p>
-                Founded in 2020, S.A.M Engineering began as a small electrical and HVAC contracting 
+                S.A.M Engineering began as a small electrical and HVAC contracting 
                 company with a vision to revolutionize industrial electromechanical 
                 solutions. Over the years, we've grown into a comprehensive service 
                 provider, serving clients across multiple industries.

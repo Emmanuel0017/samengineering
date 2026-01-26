@@ -19,17 +19,42 @@ const ProjectsPage: React.FC = () => {
 
   const projects: Project[] = [
     {
-      id: 1,
-      title: 'Blantyre Industrial Estate Electrical Upgrade',
-      category: 'electrical',
-      description: 'Complete electrical system modernization',
-      fullDescription: 'Comprehensive electrical system upgrade for Blantyre Industrial Estate manufacturing facilities, including new power distribution, lighting systems, and emergency power solutions. The project involved replacing outdated equipment with energy-efficient systems and implementing smart control technologies.',
-      imageUrl: 'assets/9 (37).jpg',
-      completionDate: 'June 2023',
-      client: 'Blantyre Industrial Holdings Ltd.',
-      location: 'Blantyre Industrial Estate, Malawi',
-      technologies: ['Power Distribution', 'Lighting Control', 'Emergency Systems', 'Energy Management', 'Smart Grid']
-    },
+  id: 1,
+  title: 'Powerline Construction Project',
+  category: 'electrical',
+  description: 'Installation of high-voltage power lines to enhance area electricity distribution and reliability.',
+  fullDescription: 'Comprehensive construction of electrical powerlines, including the installation of durable poles and high-voltage cables to improve electricity distribution and reliability across the area. The project ensured safe, efficient, and sustainable energy delivery for residential and commercial users.',
+  imageUrl: 'assets/9 (24).jpg',
+  completionDate: 'November 2025',
+  client: 'Illovo Ltd.',
+  location: 'Nkhotakota, Dwangwa',
+  technologies: ['High-Voltage Powerlines', 'Electrical Poles', 'Energy Distribution', 'Safety Compliance', 'Sustainable Construction']
+},
+{
+  id: 2,
+  title: 'Commercial HVAC Installation',
+  category: 'hvac',
+  description: 'Energy-efficient HVAC system installation for modern office complex with smart climate control technology.',
+  fullDescription: 'Installation of a state-of-the-art, energy-efficient HVAC system in a modern office complex. The project included smart climate control systems, air quality monitoring, and energy optimization strategies to ensure comfortable and sustainable working environments.',
+  imageUrl: 'assets/10.jpg',
+  completionDate: 'September 2023',
+  client: 'Central East African Railways(CEAR)',
+  location: 'Blantyre, Lilongwe, Balaka, Liwonde, Malawi',
+  technologies: ['HVAC Systems', 'Smart Climate Control', 'Energy Optimization', 'Air Quality Management', 'Sustainable Cooling']
+},
+{
+  id: 3,
+  title: 'Network Tower Inspection and Maintenance',
+  category: 'maintenance',
+  description: 'Routine inspection and maintenance services for telecom network towers to ensure optimal performance and safety compliance.',
+  fullDescription: 'Regular inspection and maintenance of telecom network towers to guarantee uninterrupted network performance and compliance with safety standards. Tasks included structural integrity checks, antenna alignment, electrical system verification, and preventive maintenance to minimize downtime.',
+  imageUrl: 'assets/10 (9).jpg',
+  completionDate: 'July 2024',
+  client: 'CEAR',
+  location: 'Liwonde, Mwanza',
+  technologies: ['Telecom Tower Maintenance', 'Structural Inspection', 'Preventive Maintenance', 'Network Optimization', 'Safety Compliance']
+}
+
   ];
 
   const categories = [

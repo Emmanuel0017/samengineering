@@ -18,24 +18,24 @@ const Projects: React.FC = () => {
   const projects: Project[] = [
     {
       id: 1,
-      title: 'Industrial Plant Electrical Upgrade',
+      title: 'Powerline construction project',
       category: 'electrical',
-      description: 'Complete electrical system modernization for manufacturing facility with advanced power distribution and control systems.',
-      imageUrl: 'assets/9 (11).jpg'
+      description: 'Installation of high-voltage power lines to enhance area electricity distribution and reliability.',
+      imageUrl: 'assets/9 (24).jpg'
     },
     {
       id: 2,
       title: 'Commercial HVAC Installation',
       category: 'hvac',
       description: 'Energy-efficient HVAC system installation for modern office complex with smart climate control technology.',
-      imageUrl: 'assets/9 (13).jpg'
+      imageUrl: 'assets/10.jpg'
     },
     {
       id: 3,
-      title: 'Factory Automation System',
-      category: 'automation',
-      description: 'Advanced automation and robotics integration for production line optimization and efficiency improvement.',
-      imageUrl: 'assets/5.jpeg'
+      title: 'Network Tower inspection and Maintenance',
+      category: 'maintenance',
+      description: 'Routine inspection and maintenance services for telecom network towers to ensure optimal performance and safety compliance.',
+      imageUrl: 'assets/10 (9).jpg'
     },
     // {
     //   id: 4,

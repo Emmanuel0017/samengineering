@@ -10,42 +10,75 @@ interface Message {
 
 export default function Chatbot() {
   const [messages, setMessages] = useState<Message[]>([
-    { from: "bot", text: "Hello 👋 How can S.A.M Engineering assist you today?" },
+    {
+      from: "bot",
+      text: "Hello 👋 How can S.A.M Engineering assist you today?",
+    },
   ]);
+
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
 
   const sendMessage = async () => {
-    if (!input.trim()) return;
+    if (!input.trim() || loading) return;
 
-    const userText = input;
+    const userText = input.trim();
+
+    // Clear input immediately
     setInput("");
     setLoading(true);
 
-    setMessages((prev) => [...prev, { from: "user", text: userText }]);
+    // Add user message
+    setMessages((prev) => [
+      ...prev,
+      { from: "user", text: userText },
+    ]);
 
     try {
-      const res = await fetch("http://localhost:3001/api/chat", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ message: userText }),
-      });
+      const res = await fetch(
+        "https://chatbot-wzhx.onrender.com/chat",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            text: userText, // must match FastAPI schema
+          }),
+        }
+      );
+
+      if (!res.ok) {
+        throw new Error(`Server error: ${res.status}`);
+      }
 
       const data = await res.json();
 
+      // Add bot response
       setMessages((prev) => [
         ...prev,
-        { from: "bot", text: data.reply ?? "No response" },
+        {
+          from: "bot",
+          text: data.response || "No response from server.",
+        },
       ]);
-    } catch {
+    } catch (error) {
+      console.error("Chatbot error:", error);
+
       setMessages((prev) => [
         ...prev,
         {
           from: "bot",
           text: (
             <>
-              Sorry i cannot help you at the moment. Please{" "}
-              <a href="/contact" style={{ color: "#007bff", textDecoration: "underline" }}>
+              Sorry, I can’t help you right now. Please{" "}
+              <a
+                href="/contact"
+                style={{
+                  color: "#007bff",
+                  textDecoration: "underline",
+                }}
+              >
                 contact us
               </a>{" "}
               directly.
@@ -58,24 +91,46 @@ export default function Chatbot() {
     }
   };
 
+  // Send on Enter key
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter") {
+      sendMessage();
+    }
+  };
+
   return (
     <div className="chatbot">
       <div className="messages">
         {messages.map((m, i) => (
-          <div key={i} className={`message ${m.from}`}>
+          <div
+            key={i}
+            className={`message ${m.from}`}
+          >
             {typeof m.text === "string" ? m.text : m.text}
           </div>
         ))}
-        {loading && <div className="message bot">Typing...</div>}
+
+        {loading && (
+          <div className="message bot">
+            Typing...
+          </div>
+        )}
       </div>
 
       <div className="input-row">
         <input
+          type="text"
           value={input}
           onChange={(e) => setInput(e.target.value)}
+          onKeyDown={handleKeyDown}
           placeholder="Ask about our services..."
+          disabled={loading}
         />
-        <button onClick={sendMessage} disabled={loading}>
+
+        <button
+          onClick={sendMessage}
+          disabled={loading}
+        >
           Send
         </button>
       </div>

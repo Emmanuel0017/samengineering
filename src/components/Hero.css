@@ -1,12 +1,12 @@
 /* =========================
    ROOT VARIABLES (fallback)
    ========================= */
-:root {
+/* :root {
   --dark-blue: #1e3a8a;
   --orange: #f97316;
   --white: #ffffff;
   --neutral-medium: #e5e5e5;
-}
+} */
 
 /* =========================
    HERO SECTION
@@ -64,7 +64,7 @@
 .hero-content {
   position: relative;
   z-index: 2;
-  max-width: 620px;
+  max-width: 800px;
   margin: 0 auto;
   text-align: center;
 }
@@ -72,7 +72,7 @@
 /* =========================
    TEXT
    ========================= */
-.hero-title {
+.hero-description {
   font-size: 2.2rem;
   font-weight: 700;
   line-height: 1.25;
@@ -81,19 +81,9 @@
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
 
-.highlight {
-  display: block;
-  margin-top: 0.5rem;
-  font-size: 2.6rem;
-  font-weight: 800;
-  color: var(--orange);
-}
-
-.hero-description {
-  font-size: 1.15rem;
-  color: var(--neutral-medium);
-  margin-bottom: 2.5rem;
-  line-height: 1.6;
+.hero-title {
+  font-size: 1.3rem;
+  color: #f97316;
 }
 
 /* =========================
@@ -183,15 +173,11 @@
   }
 
   .hero-title {
-    font-size: 2rem;
-  }
-
-  .highlight {
-    font-size: 2.2rem;
+    font-size: 1.3rem;
   }
 
   .hero-description {
-    font-size: 1.05rem;
+    font-size: 2rem;
   }
 
   .hero-stats {
@@ -209,15 +195,11 @@
   }
 
   .hero-title {
-    font-size: 1.5rem;
-  }
-
-  .highlight {
-    font-size: 1.8rem;
+    font-size: 1.1rem;
   }
 
   .hero-description {
-    font-size: 0.95rem;
+    font-size: 1.8rem;
   }
 
   .hero-actions {

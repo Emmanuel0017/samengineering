@@ -13,7 +13,8 @@ import {
   faSolarPanel,
   faVideo,
   faHome,
-  faCogs
+  faCogs,
+  faLightbulb
 } from '@fortawesome/free-solid-svg-icons';
 
 interface ServiceDetail {
@@ -197,7 +198,46 @@ const ServicesPage: React.FC = () => {
       'Industrial production lines',
       'Factory upgrades'
     ]
-  }
+  },
+  {
+  id: 10,
+  icon: faBolt,
+  title: 'Energy Audit Services',
+  description: 'Comprehensive assessment of energy usage to improve efficiency, reduce costs, and optimize system performance.',
+  features: [
+    'Energy consumption analysis',
+    'Equipment efficiency evaluation',
+    'Power loss identification',
+    'Energy-saving recommendations',
+    'Performance monitoring reports'
+  ],
+  applications: [
+    'Commercial buildings',
+    'Industrial facilities',
+    'Residential properties',
+    'Government and public institutions'
+  ]
+},
+{
+  id: 11,
+  icon: faLightbulb,
+  title: 'Street Lighting Installation & Maintenance',
+  description: 'Professional installation and maintenance of street lighting systems for improved visibility, safety, and security.',
+  features: [
+    'Street light installation',
+    'LED lighting upgrades',
+    'Electrical cabling and connections',
+    'Routine inspection and maintenance',
+    'Fault detection and repair'
+  ],
+  applications: [
+    'Urban roads and highways',
+    'Residential areas',
+    'Industrial zones',
+    'Parks and public spaces'
+  ]
+}
+  
 ];
 
 

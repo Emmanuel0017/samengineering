@@ -11,11 +11,11 @@ const Hero: React.FC = () => {
       <div className="container">
         <div className="hero-content">
           <div className="hero-text">
-            <h1 className="hero-title"> 
-              SMART ACCURATE AND MODERN <span className="highlight">ELECTROMECHANICAL ENGINEERING</span> 
-            </h1>
+            <h2 className="hero-title"> 
+              SMART ACCURATE AND MODERN ELECTROMECHANICAL ENGINEERING
+            </h2>
             <p className="hero-description">
-              We believe engineering should empower people, strengthen industries, and power Malawi's future.
+              WE BELIEVE ENGINEERING SHOULD EMPOWER PEOPLE, STRENGTHEN INDUSTRIES, AND POWER MALAWI'S FUTURE.
             </p>
             <div className="hero-actions">
               <Link to="/contact" className="btn btn-primary hero-cta">

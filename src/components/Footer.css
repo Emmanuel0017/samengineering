@@ -13,7 +13,6 @@
 
 .footer-section h4 {
   color: var(--white);
-  margin-bottom: 1.5rem;
   font-size: 1.2rem;
 }
 
@@ -21,22 +20,20 @@
   font-family: 'Montserrat', sans-serif;
   font-size: 1.5rem;
   font-weight: 700;
-  margin-bottom: 1rem;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
 }
 
 .footer-logo img {
-  max-height: 200px;
-  position: absolute;
-  left: 4rem;
+  max-height: 50px;
+  max-width: 300px;
+  margin-top: -0.5rem;
 }
 
 .footer-description {
   color: var(--neutral-medium);
   margin-bottom: 1.5rem;
-  margin-top: 4rem;
+  margin-top: 1rem;
   line-height: 1.6;
 }
 

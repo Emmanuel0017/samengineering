@@ -9,6 +9,7 @@ import ProjectsPage from './pages/ProjectsPage';
 import Contact from './pages/Contact';
 import './App.css';
 import ChatbotWidget from './components/ChatbotWidget';
+import BlogPage from './pages/Blog';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<ServicesPage />} />
             <Route path="/projects" element={<ProjectsPage />} />
+            <Route path="/blog" element={<BlogPage />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>

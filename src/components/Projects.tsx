@@ -21,21 +21,21 @@ const Projects: React.FC = () => {
       title: 'Powerline construction project',
       category: 'electrical',
       description: 'Installation of high-voltage power lines to enhance area electricity distribution and reliability.',
-      imageUrl: 'assets/9 (24).jpg'
+      imageUrl: 'assets/9 (24).png'
     },
     {
       id: 2,
       title: 'Commercial HVAC Installation',
       category: 'hvac',
       description: 'Energy-efficient HVAC system installation for modern office complex with smart climate control technology.',
-      imageUrl: 'assets/10.jpg'
+      imageUrl: 'assets/A1.png'
     },
     {
       id: 3,
       title: 'Network Tower inspection and Maintenance',
       category: 'maintenance',
       description: 'Routine inspection and maintenance services for telecom network towers to ensure optimal performance and safety compliance.',
-      imageUrl: 'assets/10 (9).jpg'
+      imageUrl: 'assets/11 (1).png'
     },
     // {
     //   id: 4,

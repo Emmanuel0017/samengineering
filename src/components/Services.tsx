@@ -4,12 +4,7 @@ import './Services.css';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { 
-  faBolt, 
-  faSnowflake, 
-  faPlug, 
-  faIndustry,
-  faArrowRight,
-  IconDefinition
+  faArrowRight
 } from '@fortawesome/free-solid-svg-icons';
 
 interface Service {

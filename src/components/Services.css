@@ -11,7 +11,7 @@
 
 .service-card {
   background-color: var(--white);
-  padding: 2.5rem 2rem;
+  padding-bottom: 2rem;
   border-radius: 10px;
   text-align: center;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
@@ -24,20 +24,21 @@
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
 
-.service-icon {
-  font-size: 3rem;
-  margin-bottom: 1.5rem;
-  display: block;
-  color: var(--dark-blue); 
+.service-image {
+  max-height: 400px;
+  max-width: 300px;
 }
 
-.service-icon svg {
-  width: 1em !important; 
-  height: 1em !important;
+.service-image img {
+  max-height: 200px;
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  object-fit: cover;
 }
 
 .service-title {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: var(--dark-blue);
   margin-bottom: 1rem;
 }

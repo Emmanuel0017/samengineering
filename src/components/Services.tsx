@@ -14,36 +14,36 @@ import {
 
 interface Service {
   id: number;
-  icon: IconDefinition;
+  image: string;
   title: string;
-  description: string;
+  // description: string;
 }
 
 const Services: React.FC = () => {
   const services: Service[] = [
   {
     id: 1,
-    icon: faBolt,
+    image: 'assets/9 (23).jpg',
     title: 'Power Line Construction & Maintenance',
-    description: 'Construction and maintenance of transmission and distribution power lines to ensure reliable electricity supply.'
+    // description: 'Construction and maintenance of transmission and distribution power lines to ensure reliable electricity supply.'
   },
   {
     id: 2,
-    icon: faPlug,
+    image: 'assets/9 (33).jpg',
     title: 'Building Electrical Services',
-    description: 'Complete electrical installations and upgrades for residential, commercial, and industrial buildings.'
+    // description: 'Complete electrical installations and upgrades for residential, commercial, and industrial buildings.'
   },
   {
     id: 3,
-    icon: faSnowflake,
+    image: 'assets/12 (7).jpg',
     title: 'Air Conditioning Solutions',
-    description: 'Installation and maintenance of air conditioning systems for comfortable and efficient indoor environments.'
+    // description: 'Installation and maintenance of air conditioning systems for comfortable and efficient indoor environments.'
   },
   {
     id: 4,
-    icon: faIndustry,
+    image: 'assets/9 (30).jpg',
     title: 'Industrial & Plant Services',
-    description: 'Installation, maintenance, and optimization of industrial equipment and production plants.'
+    // description: 'Installation, maintenance, and optimization of industrial equipment and production plants.'
   }
 ];
 
@@ -58,14 +58,11 @@ const Services: React.FC = () => {
         <div className="services-grid">
           {services.slice(0, 4).map(service => (
             <div key={service.id} className="service-card">
-              <div className="service-icon">
-                <FontAwesomeIcon 
-                  icon={service.icon} 
-                  style={{ color: 'var(--dark-blue)' }} 
-                />
+              <div className="service-image">
+                <img src={service.image} alt="services" />
               </div>
               <h3 className="service-title">{service.title}</h3>
-              <p className="service-description">{service.description}</p>
+              {/* <p className="service-description">{service.description}</p> */}
               <Link to="/services" className="service-link">
                 Learn More <FontAwesomeIcon icon={faArrowRight} />
               </Link>

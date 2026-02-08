@@ -30,7 +30,7 @@ const BlogPage: React.FC = () => {
 
   const [posts, setPosts] = useState<BlogPost[]>([
     {
-      id: 1,
+      id: 2,
       title: 'Powerline Construction Project: Enhancing Energy Distribution in Nkhotakota',
       category: 'casestudy',
       excerpt: 'A comprehensive case study on our high-voltage powerline installation project for Illovo Ltd., improving electricity reliability across Dwangwa.',
@@ -81,7 +81,7 @@ This project showcases our expertise in integrated electrical solutions that ser
       }
     },
     {
-      id: 2,
+      id: 3,
       title: 'Commercial HVAC Installation: Smart Climate Control for CEAR Offices',
       category: 'casestudy',
       excerpt: 'Case study on implementing energy-efficient HVAC systems across CEAR office complexes in multiple Malawian locations.',
@@ -132,7 +132,7 @@ This project showcases our comprehensive commercial climate control and applianc
       }
     },
     {
-      id: 3,
+      id: 4,
       title: 'Network Tower Maintenance: Ensuring Telecom Reliability Across Malawi',
       category: 'casestudy',
       excerpt: 'How our preventive maintenance program for CEAR telecom towers improved network performance and reduced downtime.',

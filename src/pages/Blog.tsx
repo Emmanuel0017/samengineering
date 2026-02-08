@@ -30,6 +30,94 @@ const BlogPage: React.FC = () => {
 
   const [posts, setPosts] = useState<BlogPost[]>([
     {
+      id: 1,
+      title: 'Industrial Plant Construction: Electromechanical Systems Integration',
+      category: 'mechanical',
+      excerpt: 'Comprehensive engineering solutions for industrial plant construction, integrating electrical, mechanical, and automation systems.',
+      fullContent: `Our team successfully delivered a electromechanical solution for a new industrial processing plant in Nkhotakota, Dwangwa. This project involved the integration of complex systems to ensure optimal plant performance and operational efficiency.
+
+Project Overview:
+We provided end-to-end engineering services for the construction of a modern processing facility, focusing on seamless integration of electrical, mechanical, and automation systems. The project aimed to establish a state-of-the-art production line with maximum efficiency and minimum environmental impact.
+
+Key Components:
+- Electrical power distribution systems
+- Mechanical conveyor and processing equipment
+- Automated control systems
+- Safety and emergency systems
+- Environmental control systems
+- Quality monitoring systems
+
+Technical Implementation:
+1. Electrical Infrastructure:
+   - Main power distribution panels
+   - Motor control centers
+   - Lighting and emergency power systems
+   - Grounding and lightning protection
+
+2. Mechanical Systems:
+   - Conveyor belt installations
+   - Pump and valve systems
+   - Processing equipment assembly
+   - Ventilation and exhaust systems
+
+3. Automation & Control:
+   - Programmable Logic Controllers (PLC)
+   - Human-Machine Interface (HMI) panels
+   - Sensor networks and monitoring systems
+   - Data acquisition systems
+
+Challenges Overcome:
+- Integrating legacy equipment with modern systems
+- Ensuring compliance with industrial safety standards
+- Maintaining project timeline during supply chain disruptions
+- Implementing energy-efficient solutions within budget constraints
+
+Innovative Solutions:
+- Modular system design for future expansion
+- Energy recovery systems to reduce operational costs
+- Predictive maintenance capabilities through IoT integration
+- Remote monitoring and control systems
+- Sustainable materials and green building practices
+
+Results Delivered:
+- 30% increase in production efficiency
+- 25% reduction in energy consumption
+- 100% compliance with industrial safety standards
+- Zero critical safety incidents during construction
+- 20% reduction in maintenance costs through predictive systems
+- Enhanced equipment lifespan through proper installation
+
+Environmental Impact:
+The plant incorporates sustainable practices including:
+- Water recycling systems
+- Energy-efficient lighting and motors
+- Waste management systems
+- Emission control technologies
+- Noise reduction measures
+
+This industrial plant construction project demonstrates our capability to handle complex, multi-disciplinary engineering projects while delivering measurable results in efficiency, safety, and sustainability.`,
+      imageUrl: 'assets/11 (9).jpg',
+      galleryImages: [
+        'assets/11 (10).jpg',
+        'assets/11 (9).jpg',
+        'assets/9 (36).jpg',
+        'assets/9 (38).jpg',
+        'assets/9 (40).jpg',
+        'assets/11 (4).jpg'
+      ],
+      publishDate: 'March 15, 2023',
+      author: 'Industrial Engineering Team',
+      readTime: '10 min read',
+      tags: ['Industrial Plant', 'Electromechanical', 'System Integration', 'Automation', 'Construction', 'Manufacturing'],
+      isExpanded: false,
+      projectDetails: {
+        client: 'Ethanol Ltd.',
+        location: 'Nkhotakota, Dwangwa',
+        technologies: ['PLC Systems', 'Power Distribution', 'Mechanical Conveyors', 'Automation Control', 'Safety Systems', 'Energy Management'],
+        completionDate: 'on going'
+      }
+    },
+    {
       id: 2,
       title: 'Powerline Construction Project: Enhancing Energy Distribution in Nkhotakota',
       category: 'casestudy',
@@ -183,7 +271,113 @@ This project demonstrates our expertise in telecom infrastructure maintenance, e
         technologies: ['Telecom Tower Maintenance', 'Structural Inspection', 'Preventive Maintenance', 'Network Optimization', 'Safety Compliance'],
         completionDate: 'July 2024'
       }
-    },
+      },
+    {
+      id: 5,
+      title: 'Modern Street Lighting Installation: Enhancing Safety and Efficiency',
+      category: 'electrical',
+      excerpt: 'Implementation of smart street lighting systems that improve public safety while reducing energy consumption and maintenance costs.',
+      fullContent: `We recently completed a comprehensive street lighting project in Blantyre's central business district, transforming the urban nightscape with smart, energy-efficient lighting solutions.
+
+Project Overview:
+The initiative involved installing street lights with modern LED systems equipped with smart controls, significantly improving visibility, safety, and energy efficiency.
+
+System Features:
+1. Smart LED Lighting:
+   - High-efficiency LED luminaires
+   - Adaptive brightness control
+   - Color temperature optimization
+   - Long lifespan (50,000+ hours)
+
+2. Intelligent Control System:
+   - Centralized monitoring platform
+   - Individual light control capability
+   - Automatic dimming based on traffic patterns
+   - Fault detection and reporting
+   - Remote configuration and updates
+
+3. Energy Management:
+   - Solar power integration for selected areas
+   - Power consumption monitoring
+   - Peak load management
+   - Energy usage analytics
+
+4. Safety Enhancements:
+   - Motion sensor activation in low-traffic areas
+   - Emergency lighting protocols
+   - Backup power systems
+   - Vandal-resistant designs
+
+Installation Process:
+- Phase 1: Site assessment and planning
+- Phase 2: Pole installation and foundation work
+- Phase 3: Electrical wiring and connections
+- Phase 4: Fixture installation and alignment
+- Phase 5: Control system programming
+- Phase 6: Testing and commissioning
+- Phase 7: Maintenance training and handover
+
+Technical Specifications:
+- 12 km of cabling
+- 15 smart control nodes
+- 2 centralized monitoring stations
+- Weather-resistant IP65 rated fixtures
+
+Key Challenges Addressed:
+- Integrating with existing electrical infrastructure
+- Ensuring uniform light distribution
+- Protecting against power surges and theft
+- Managing different lighting requirements for various zones
+
+Performance Results:
+- 65% reduction in energy consumption
+- 40% decrease in maintenance calls
+- 30% improvement in lighting uniformity
+- 90% reduction in light pollution
+- 24/7 monitoring capability
+- 5-year warranty on all components
+
+Community Impact:
+- Enhanced pedestrian safety in evening hours
+- Reduced traffic accidents in poorly lit areas
+- Improved business activity during night hours
+- Increased property values in illuminated areas
+- Better security surveillance capabilities
+- Positive environmental impact through energy savings
+
+Economic Benefits:
+- Lower municipal electricity bills
+- Reduced maintenance labor costs
+- Extended equipment lifespan
+- Potential for smart city expansion
+- Attraction of nighttime economic activities
+
+Future-Ready Design:
+The system is designed for scalability, allowing for:
+- Additional smart city integrations
+- Traffic monitoring capabilities
+- Environmental sensors
+- Public WiFi hotspots
+- Emergency response systems
+
+This street lighting project demonstrates how modern electrical engineering can transform urban infrastructure, creating safer, more efficient, and sustainable cities while delivering significant economic benefits.`,
+      imageUrl: 'assets/11 (6).jpg',
+      galleryImages: [
+        'assets/11 (7).jpg',
+        'assets/11 (6).jpg'
+      ],
+      publishDate: 'June 22, 2024',
+      author: 'Engineering Team',
+      readTime: '9 min read',
+      tags: ['Street Lighting', 'LED Technology', 'Smart Cities', 'Urban Infrastructure', 'Energy Efficiency', 'Public Safety'],
+      isExpanded: false,
+      projectDetails: {
+        client: 'Illovo Ltd',
+        location: 'Nkhotakota, Dwangwa',
+        technologies: ['LED Lighting', 'Smart Controls', 'Solar Power', 'IoT Monitoring', 'Power Management', 'Wireless Communication'],
+        completionDate: 'May 2025'
+      }
+    }
   ]);
 
   const categories = [

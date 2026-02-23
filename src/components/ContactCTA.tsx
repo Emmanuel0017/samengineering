@@ -27,7 +27,7 @@ const ContactCTA: React.FC = () => {
               </div>
               <div className="info-item">
                 <span className="info-icon"><FontAwesomeIcon icon={faEnvelope}/></span>
-                <span><a href="mailto:info@samengineering.com">info@samengineering.com</a></span>
+                <span><a href="mailto:info@samengineeringmw.com">info@samengineeringmw.com</a></span>
               </div>
             </div>
           </div>

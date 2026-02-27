@@ -26,7 +26,7 @@
   transform: translateX(-50%);
   width: 52px;
   height: 3px;
-  background-color: var(--grey);
+  background-color: var(--orange);
   border-radius: 2px;
 }
 
@@ -49,7 +49,7 @@
   background: var(--white);
   border-radius: 14px;
   padding: 2.4rem;
-  border-left: 4px solid var(--grey);
+  border-left: 4px solid var(--orange);
   box-shadow: 0 8px 22px rgba(0, 0, 0, 0.1);
 
   display: flex;
@@ -59,7 +59,7 @@
 
 .featured-icon {
   font-size: 3rem;
-  color: var(--dark-blue);
+  color: var(--orange);
   flex-shrink: 0;
 }
 
@@ -79,7 +79,7 @@
   background: var(--white);
   padding: 1.6rem;
   border-radius: 12px;
-  border-top: 3px solid var(--grey);
+  border-top: 3px solid var(--orange);
   box-shadow: 0 5px 14px rgba(0, 0, 0, 0.08);
 
   display: flex;
@@ -99,7 +99,7 @@
    ============================= */
 .core-value-icon {
   font-size: 1.7rem;
-  color: var(--dark-blue);
+  color: var(--orange);
   flex-shrink: 0;
 }
 

@@ -3,23 +3,13 @@ import { Link } from 'react-router-dom';
 import './ServicesPage.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-  faBolt,
-  faTools,
-  faSnowflake,
-  faPlug,
-  faIndustry,
   faCheck,
-  faArrowRight,
-  faSolarPanel,
-  faVideo,
-  faHome,
-  faCogs,
-  faLightbulb
+  faArrowRight
 } from '@fortawesome/free-solid-svg-icons';
 
 interface ServiceDetail {
   id: number;
-  icon: any; 
+  image: string;
   title: string;
   description: string;
   features: string[];
@@ -30,7 +20,7 @@ const ServicesPage: React.FC = () => {
   const services: ServiceDetail[] = [
   {
     id: 1,
-    icon: faBolt,
+    image: 'assets/PowerLines/Powerlines (12).jpg',
     title: 'Transmission Powerline Construction & Maintenance',
     description: 'Construction and maintenance of high-voltage power lines that transmit electricity over long distances.',
     features: [
@@ -49,7 +39,7 @@ const ServicesPage: React.FC = () => {
   },
   {
     id: 2,
-    icon: faPlug,
+    image: 'assets/PowerLines/Powerlines (7).jpg',
     title: 'Distribution Powerline Construction & Maintenance',
     description: 'Installation and servicing of power lines that distribute electricity to homes, businesses, and communities.',
     features: [
@@ -68,7 +58,7 @@ const ServicesPage: React.FC = () => {
   },
   {
     id: 3,
-    icon: faTools,
+    image: 'assets/Electrical/Electrical.jpg',
     title: 'Building Electrical Services',
     description: 'Complete electrical installations for safe and reliable power within buildings.',
     features: [
@@ -87,7 +77,7 @@ const ServicesPage: React.FC = () => {
   },
   {
     id: 4,
-    icon: faSnowflake,
+    image: 'assets/HVAC/HVAC (1).png',
     title: 'Air Conditioning Installation & Maintenance',
     description: 'Installation and maintenance of air conditioning systems for comfortable indoor environments.',
     features: [
@@ -106,7 +96,7 @@ const ServicesPage: React.FC = () => {
   },
   {
     id: 5,
-    icon: faSolarPanel,
+    image: 'assets/Solar/Solar (1).png',
     title: 'Renewable Energy Installation & Maintenance',
     description: 'Clean and sustainable energy solutions designed to reduce power costs and improve reliability.',
     features: [
@@ -125,7 +115,7 @@ const ServicesPage: React.FC = () => {
   },
   {
     id: 6,
-    icon: faIndustry,
+    image: 'assets/Mechanical/Mechanical (6).jpg',
     title: 'Industrial Electro-Mechanical Installations & Maintenance',
     description: 'Installation and maintenance of electrical and mechanical systems used in industrial operations.',
     features: [
@@ -144,7 +134,7 @@ const ServicesPage: React.FC = () => {
   },
   {
     id: 7,
-    icon: faVideo,
+    image: 'assets/CCTV/CCTV (3).png',
     title: 'CCTV & Intercom Systems',
     description: 'Security and communication systems that help monitor premises and control access.',
     features: [
@@ -163,7 +153,7 @@ const ServicesPage: React.FC = () => {
   },
   {
     id: 8,
-    icon: faHome,
+    image: 'assets/auto.png',
     title: 'House Automation Solutions',
     description: 'Smart home solutions that provide convenient control of lighting, security, and appliances.',
     features: [
@@ -182,7 +172,7 @@ const ServicesPage: React.FC = () => {
   },
   {
     id: 9,
-    icon: faCogs,
+    image: 'assets/Other/Other (12).jpg',
     title: 'Production Plant Installation, Maintenance & Optimization',
     description: 'Installation and improvement of production facilities to ensure efficient and reliable operations.',
     features: [
@@ -201,7 +191,7 @@ const ServicesPage: React.FC = () => {
   },
   {
   id: 10,
-  icon: faBolt,
+  image: 'assets/Energy.jpg',
   title: 'Energy Audit Services',
   description: 'Comprehensive assessment of energy usage to improve efficiency, reduce costs, and optimize system performance.',
   features: [
@@ -220,7 +210,7 @@ const ServicesPage: React.FC = () => {
 },
 {
   id: 11,
-  icon: faLightbulb,
+  image: 'assets/11 (7).jpg',
   title: 'Street Lighting Installation & Maintenance',
   description: 'Professional installation and maintenance of street lighting systems for improved visibility, safety, and security.',
   features: [
@@ -259,7 +249,7 @@ const ServicesPage: React.FC = () => {
           <div className="services-intro">
             <h2>Expert Electromechanical Solutions</h2>
             <p>
-              With our years of experience, S.A.M Engineering delivers comprehensive 
+              With our years of experience, we deliver comprehensive 
               electromechanical services that combine technical expertise with 
               innovative solutions. Our team of certified professionals ensures 
               every project meets the highest standards of quality and safety.
@@ -269,44 +259,48 @@ const ServicesPage: React.FC = () => {
           <div className="services-detailed">
             {services.map(service => (
               <div key={service.id} className="service-detail">
-                <div className="service-header">
-                  <div className="service-icon-large">
-                    <FontAwesomeIcon icon={service.icon} />
-                  </div>
-                  <div className="service-info">
-                    <h3>{service.title}</h3>
-                    <p>{service.description}</p>
-                  </div>
+                <div className="service-image-container">
+                  <img src={service.image} alt={service.title} className="service-image" />
+                  <div className="service-image-overlay"></div>
                 </div>
                 
-                <div className="service-content">
-                  <div className="service-features">
-                    <h4>Key Features</h4>
-                    <ul>
-                      {service.features.map((feature, index) => (
-                        <li key={index}>
-                          <FontAwesomeIcon icon={faCheck} className="feature-check" /> {feature}
-                        </li>
-                      ))}
-                    </ul>
+                <div className="service-content-wrapper">
+                  <div className="service-header">
+                    <div className="service-info">
+                      <h3>{service.title}</h3>
+                      <p>{service.description}</p>
+                    </div>
                   </div>
                   
-                  <div className="service-applications">
-                    <h4>Applications</h4>
-                    <ul>
-                      {service.applications.map((application, index) => (
-                        <li key={index}>
-                          <FontAwesomeIcon icon={faCheck} className="application-check" /> {application}
-                        </li>
-                      ))}
-                    </ul>
+                  <div className="service-content">
+                    <div className="service-features">
+                      <h4>Key Features</h4>
+                      <ul>
+                        {service.features.map((feature, index) => (
+                          <li key={index}>
+                            <FontAwesomeIcon icon={faCheck} className="feature-check" /> {feature}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    
+                    <div className="service-applications">
+                      <h4>Applications</h4>
+                      <ul>
+                        {service.applications.map((application, index) => (
+                          <li key={index}>
+                            <FontAwesomeIcon icon={faCheck} className="application-check" /> {application}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   </div>
-                </div>
-                
-                <div className="service-cta">
-                  <Link to="/contact" className="btn btn-primary">
-                    Get Quote for {service.title} <FontAwesomeIcon icon={faArrowRight} />
-                  </Link>
+                  
+                  <div className="service-cta">
+                    <Link to="/contact" className="btn btn-primary">
+                      Get Quote <FontAwesomeIcon icon={faArrowRight} />
+                    </Link>
+                  </div>
                 </div>
               </div>
             ))}
@@ -315,6 +309,7 @@ const ServicesPage: React.FC = () => {
       </section>
 
       <section className="section cta-section">
+        <div className="ser-cta-overlay"></div>
         <div className="container">
           <div className="cta-content">
             <h2>Ready to Start Your Project?</h2>

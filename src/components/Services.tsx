@@ -37,7 +37,7 @@ const Services: React.FC = () => {
     },
     {
       id: 4,
-      image: 'assets/Other/Other (19).jpg',
+      image: 'assets/11 (9).jpg',
       title: 'Industrial & Plant Services',
       description:
         'Installation, maintenance, and optimization of industrial equipment and production plants.'

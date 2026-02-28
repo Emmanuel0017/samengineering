@@ -36,7 +36,7 @@ const ProjectsPage: React.FC = () => {
   category: 'hvac',
   description: 'Energy-efficient HVAC system installation for modern office complex with smart climate control technology.',
   fullDescription: 'Installation of a state-of-the-art, energy-efficient HVAC system in a modern office complex. The project included smart climate control systems, air quality monitoring, and energy optimization strategies to ensure comfortable and sustainable working environments.',
-  imageUrl: 'assets/A1.png',
+  imageUrl: 'assets/HVAC/HVAC (6).jpg',
   completionDate: 'September 2023',
   client: 'Central East African Railways(CEAR)',
   location: 'Blantyre, Lilongwe, Balaka, Liwonde, Malawi',

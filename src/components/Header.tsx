@@ -6,7 +6,6 @@ import { faPhone } from '@fortawesome/free-solid-svg-icons';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
 
   const menuRef = useRef<HTMLDivElement>(null);
@@ -25,9 +24,7 @@ const Header: React.FC = () => {
     setOpenDropdown(null);
   };
 
-  /* ===========================
-     Close on outside click
-  ============================ */
+  /* Close on outside click */
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (
@@ -41,9 +38,7 @@ const Header: React.FC = () => {
     };
 
     const handleEscape = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') {
-        closeAll();
-      }
+      if (event.key === 'Escape') closeAll();
     };
 
     document.addEventListener('mousedown', handleClickOutside);
@@ -62,7 +57,7 @@ const Header: React.FC = () => {
 
           {/* Logo */}
           <Link to="/" className="logo" onClick={closeAll}>
-            <img src="assets/logo/samuel injini logo.png" alt="S.A.M" />
+            <img src="assets/logo/samuel injini logo.png" alt="S.A.M Engineering" />
           </Link>
 
           {/* Navigation */}
@@ -77,100 +72,84 @@ const Header: React.FC = () => {
                 About
               </NavLink>
 
-              {/* Services Dropdown */}
+              {/* SERVICES */}
               <div className="nav-item">
-                <button
-                  className="nav-link dropdown-toggle"
-                  onClick={() => toggleDropdown('services')}
-                  type="button"
-                >
-                  <a href="/services">Services</a>
-                  <span className={`arrow ${openDropdown === 'services' ? 'rotate' : ''}`}></span>
-                </button>
+                <div className="dropdown-toggle-wrapper">
+
+                  <NavLink to="/services" className="nav-link" onClick={closeAll}>
+                    Services
+                  </NavLink>
+
+                  <button
+                    className="dropdown-toggle"
+                    onClick={() => toggleDropdown('services')}
+                    type="button"
+                  >
+                    <span className={`arrow ${openDropdown === 'services' ? 'rotate' : ''}`}></span>
+                  </button>
+
+                </div>
 
                 <div className={`dropdown-menu ${openDropdown === 'services' ? 'mobile-show' : ''}`}>
-                  <NavLink to="/services" onClick={closeAll}>
-                    Transmission Powerline Construction & Maintenance
-                  </NavLink>
-                  <NavLink to="/services" onClick={closeAll}>
-                    Distribution Powerline Construction & Maintenance
-                  </NavLink>
-                  <NavLink to="/services" onClick={closeAll}>
-                    Building Electrical Services
-                  </NavLink>
-                  <NavLink to="/services" onClick={closeAll}>
-                    Air Conditioning Installation & Maintenance
-                  </NavLink>
-                  <NavLink to="/services" onClick={closeAll}>
-                    Renewable Energy Installation & Maintenance
-                  </NavLink>
-                  <NavLink to="/services" onClick={closeAll}>
-                    Industrial Electro-Mechanical Installations & Maintenance
-                  </NavLink>
-                  <NavLink to="/services" onClick={closeAll}>
-                    House Automation Solutions
-                  </NavLink>
-                  <NavLink to="/services" onClick={closeAll}>
-                    Production Plant Installation, Maintenance & Optimization
-                  </NavLink>
-                  <NavLink to="/services" onClick={closeAll}>
-                    Energy Audit Services
-                  </NavLink>
-                  <NavLink to="/services" onClick={closeAll}>
-                    Street Lighting Installation & Maintenance
-                  </NavLink>
+                  <NavLink to="/services" onClick={closeAll}>Transmission Powerline Construction</NavLink>
+                  <NavLink to="/services" onClick={closeAll}>Distribution Powerline Construction</NavLink>
+                  <NavLink to="/services" onClick={closeAll}>Building Electrical Services</NavLink>
+                  <NavLink to="/services" onClick={closeAll}>Air Conditioning Installation</NavLink>
+                  <NavLink to="/services" onClick={closeAll}>Renewable Energy Installation</NavLink>
                 </div>
               </div>
 
-              {/* Projects Dropdown */}
+              {/* PROJECTS */}
               <div className="nav-item">
-                <button
-                  className="nav-link dropdown-toggle"
-                  onClick={() => toggleDropdown('projects')}
-                  type="button"
-                >
-                  <a href="/projects">Projects</a>
-                  <span className={`arrow ${openDropdown === 'projects' ? 'rotate' : ''}`}></span>
-                </button>
+                <div className="dropdown-toggle-wrapper">
+
+                  <NavLink to="/projects" className="nav-link" onClick={closeAll}>
+                    Projects
+                  </NavLink>
+
+                  <button
+                    className="dropdown-toggle"
+                    onClick={() => toggleDropdown('projects')}
+                    type="button"
+                  >
+                    <span className={`arrow ${openDropdown === 'projects' ? 'rotate' : ''}`}></span>
+                  </button>
+
+                </div>
 
                 <div className={`dropdown-menu ${openDropdown === 'projects' ? 'mobile-show' : ''}`}>
-                  <NavLink to="/projects" onClick={closeAll}>
-                    Powerline Construction Project
-                  </NavLink>
-                  <NavLink to="/projects" onClick={closeAll}>
-                    Commercial HVAC Installation
-                  </NavLink>
-                  <NavLink to="/projects" onClick={closeAll}>
-                    Network Tower Inspection and Maintenance
-                  </NavLink>
+                  <NavLink to="/projects" onClick={closeAll}>Powerline Construction</NavLink>
+                  <NavLink to="/projects" onClick={closeAll}>Commercial HVAC Installation</NavLink>
                 </div>
               </div>
 
-              {/* Blog Dropdown */}
+              {/* BLOG */}
               <div className="nav-item">
-                <button
-                  className="nav-link dropdown-toggle"
-                  onClick={() => toggleDropdown('blog')}
-                  type="button"
-                >
-                  <a href="/blog">Blog</a>
-                  <span className={`arrow ${openDropdown === 'blog' ? 'rotate' : ''}`}></span>
-                </button>
+                <div className="dropdown-toggle-wrapper">
+
+                  <NavLink to="/blog" className="nav-link" onClick={closeAll}>
+                    Blog
+                  </NavLink>
+
+                  <button
+                    className="dropdown-toggle"
+                    onClick={() => toggleDropdown('blog')}
+                    type="button"
+                  >
+                    <span className={`arrow ${openDropdown === 'blog' ? 'rotate' : ''}`}></span>
+                  </button>
+
+                </div>
 
                 <div className={`dropdown-menu ${openDropdown === 'blog' ? 'mobile-show' : ''}`}>
-                  <NavLink to="/blog" onClick={closeAll}>
-                    Industrial Plant Construction: Electromechanical Systems Integration
-                  </NavLink>
-                  <NavLink to="/blog" onClick={closeAll}>
-                    Powerline Construction Project: Enhancing Energy Distribution in Nkhotakota
-                  </NavLink>
-                  <NavLink to="/blog" onClick={closeAll}>
-                    Commercial HVAC Installation: Smart Climate Control for CEAR Offices
-                  </NavLink>
+                  <NavLink to="/blog" onClick={closeAll}>Industrial Systems Integration</NavLink>
+                  <NavLink to="/blog" onClick={closeAll}>Energy Distribution Upgrade</NavLink>
                 </div>
               </div>
 
-              <NavLink to='/contact' className="nav-link" onClick={closeAll}>Contacts</NavLink>
+              <NavLink to="/contact" className="nav-link" onClick={closeAll}>
+                Contact
+              </NavLink>
 
             </nav>
           </div>
@@ -203,9 +182,7 @@ const Header: React.FC = () => {
         </div>
       </div>
 
-      {isMenuOpen && (
-        <div className="menu-overlay" onClick={closeAll}></div>
-      )}
+      {isMenuOpen && <div className="menu-overlay" onClick={closeAll}></div>}
     </header>
   );
 };

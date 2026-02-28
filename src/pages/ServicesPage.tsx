@@ -153,7 +153,7 @@ const ServicesPage: React.FC = () => {
   },
   {
     id: 8,
-    image: 'assets/auto.png',
+    image: 'assets/Automation/Automation.png',
     title: 'House Automation Solutions',
     description: 'Smart home solutions that provide convenient control of lighting, security, and appliances.',
     features: [
@@ -172,7 +172,7 @@ const ServicesPage: React.FC = () => {
   },
   {
     id: 9,
-    image: 'assets/Other/Other (12).jpg',
+    image: 'assets/11 (10).jpg',
     title: 'Production Plant Installation, Maintenance & Optimization',
     description: 'Installation and improvement of production facilities to ensure efficient and reliable operations.',
     features: [

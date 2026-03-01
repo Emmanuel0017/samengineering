@@ -147,6 +147,8 @@ body {
   text-decoration: none;
   display: flex;
   align-items: center;
+  transition: transform 0.3s ease-in-out;
+  transition: 0.3s;
 }
 
 .btn-phone {
@@ -157,6 +159,18 @@ body {
 .btn-quote {
   background: var(--orange);
   color: white;
+}
+
+.btn-quote:hover{
+  color: white;
+  background: var(--dark-blue);
+  transform: translateY(-2px);
+}
+
+.btn-phone:hover{
+  background: var(--orange);
+  color: white;
+  transform: translateY(-2px);
 }
 
 /* ================= BURGER ================= */

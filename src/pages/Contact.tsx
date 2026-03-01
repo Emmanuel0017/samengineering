@@ -137,7 +137,7 @@ const Contact: React.FC = () => {
                   <a href="/" className="social-link"><FontAwesomeIcon icon={faLinkedin} size="2x" /></a>
                   <a href="https://www.facebook.com/profile.php?id=61587047876616" className="social-link"><FontAwesomeIcon icon={faFacebook} size="2x" /></a>
                   <a href="/" className="social-link"><FontAwesomeIcon icon={faXTwitter} size="2x" /></a>
-                  <a href="/" className="social-link"><FontAwesomeIcon icon={faInstagram} size="2x" /></a>
+                  <a href="https://www.instagram.com/sam_engineeringmw?igsh=MW1mazBqOTE4ODA1MA==" className="social-link"><FontAwesomeIcon icon={faInstagram} size="2x" /></a>
                 </div>
               </div>
             </div>

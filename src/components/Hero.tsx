@@ -26,7 +26,7 @@ const Hero: React.FC = () => {
 
             {/* 4. Call to Action and Phone - Styled like the reference */}
             <div className="hero-actions">
-              <a href="tel:+61387898786" className="btn btn-primary hero-cta">
+              <a href="tel:+265994002138" className="btn btn-primary hero-cta">
                 CALL US NOW: +265 994 002 138
               </a>
               <Link to="/contact" className="btn btn-secondary">

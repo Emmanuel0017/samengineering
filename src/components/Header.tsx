@@ -120,6 +120,7 @@ const Header: React.FC = () => {
                 <div className={`dropdown-menu ${openDropdown === 'projects' ? 'mobile-show' : ''}`}>
                   <NavLink to="/projects" onClick={closeAll}>Powerline Construction</NavLink>
                   <NavLink to="/projects" onClick={closeAll}>Commercial HVAC Installation</NavLink>
+                  <NavLink to="/projects" onClick={closeAll}>Network Tower Inspection and Maintenance</NavLink>
                 </div>
               </div>
 
